@@ -1,0 +1,31 @@
+import React from 'react';
+
+
+const App: React.FC = () => {
+  const categories = ['Electronics', 'Clothing', 'Books', 'Home & Garden'];
+
+  const handleCategorySelect = (category: string) => {
+    console.log('Selected category:', category);
+    // Perform actions based on the selected category
+  };
+
+  return (
+    <div>
+      <h1>My Application</h1>
+      <Dropdown
+        options={categories}
+        onSelect={handleCategorySelect}
+        placeholder="Choose a category"
+      />
+    </div>
+  );
+};
+
+export default App;
+
+
+  const currencyy = ['USD', 'THB', 'CNY', 'LAK','EUR'];
+
+      const handleDropdownSelect = (currencyy: string) => {
+    console.log('Selected currency:', currencyy);
+     };
