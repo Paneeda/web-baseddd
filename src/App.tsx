@@ -9,6 +9,8 @@ import News from './pages/News/main';
 import ProductMain from './pages/Product/main';
 import Forms from './pages/Forms/main';
 import Career from './pages/Career/main';
+import Footer from './components/Footer/main';
+import Contactus from './pages/contactUs/main';
 
 
 
@@ -36,11 +38,17 @@ function App() {
             <Route path='/productnservice' element={<ProductMain/>} />
             <Route path='/forms' element={<Forms/>} />
             <Route path='/career' element={<Career/>} />
+            <Route path='/contactus' element={<Contactus/>} />
         
           </Routes>
         </main>
 
         {/* Footer */}
+    <div className="pt-30">
+      <Footer/>
+    </div>
+
+
       </div>
     </Router>
   );

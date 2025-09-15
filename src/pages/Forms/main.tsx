@@ -1,7 +1,6 @@
 
 import DownloadIcon from "../../assets/icons/download.svg"
 import fileicon from "/lg/file-icon.png"
-import Footer from '../../components/Footer/main';
 const Forms: React.FC = () => {
 
 
@@ -339,9 +338,7 @@ const Forms: React.FC = () => {
 
 
 
-            <div>
-                <Footer />
-            </div>
+            
 
 
 

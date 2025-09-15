@@ -1,6 +1,6 @@
 
 import Logo from "/lg/bic_1_2.png";
-import Footer from '../../components/Footer/main';
+
 
 const News: React.FC = () => {
 
@@ -136,9 +136,7 @@ const News: React.FC = () => {
                 </div>
 
             </section>
-            <div className='pt-30'>
-                <Footer />
-            </div>
+            
         </div>
     )
 }

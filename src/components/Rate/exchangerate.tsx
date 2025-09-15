@@ -1,137 +1,137 @@
-import { useState } from 'react';
+import { useState } from "react";
 
+function ExchangeRate() {
+  const [amount, setAmount] = useState<number>(1);
+  const [fromCurrency, setFromCurrency] = useState<string>("USD");
+  const [toCurrency, setToCurrency] = useState<string>("LAK");
+  const [result, setResult] = useState<number | null>(null);
 
-
-
-function ExchangeRate () {
-
-
- const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-   const changeCurrency = (currency: string) => {
-        changeCurrency(currency);
-    setIsDropdownOpen(false); // Close dropdown after selection
+  
+  const rates: Record<string, Record<string, number>> = {
+    USD: { EUR: 0.85, CNY: 7.12, THB: 31.90, LAK: 21682.61 },
+    EUR: { USD: 1.17, CNY: 8.36, THB: 37.45, LAK: 25443.00 },
+    CNY: { USD: 0.14, EUR: 0.12, THB: 4.48, LAK: 3043.60 },
+    THB: { USD: 0.031, EUR: 0.027, CNY: 0.22, LAK: 679.40},
+    LAK: { USD: 0.000046, EUR: 0.000039, CNY: 0.00033, THB: 0.0015 },
   };
 
-    const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  const currencyOptions = ["USD", "EUR", "CNY", "THB", "LAK"];
+
+  // Convert amount
+  const convert = (amount: number, from: string, to: string) => {
+    if (from === to) return amount;
+    return rates[from][to] ? amount * rates[from][to] : 0;
   };
 
+  const handleAmountChange = (value: number) => {
+    setAmount(value);
+    setResult(convert(value, fromCurrency, toCurrency));
+  };
 
+  const handleFromChange = (value: string) => {
+    setFromCurrency(value);
+    setResult(convert(amount, value, toCurrency));
+  };
 
+  const handleToChange = (value: string) => {
+    setToCurrency(value);
+    setResult(convert(amount, fromCurrency, value));
+  };
 
+  const handleSwap = () => {
+    const temp = fromCurrency;
+    setFromCurrency(toCurrency);
+    setToCurrency(temp);
+    setResult(convert(amount, toCurrency, fromCurrency));
+  };
 
-
-    return(
-        <div className=" w-full  justify-center ">
-
-             <div className=" p-5  ">
-               
-        <table className="w-full  ">
-            
-        
-            <tbody>
-                 <tr className="text-bic-navy border-b border-gray-300">
-                    <td className="px-6 py-4 text-left  font-medium">Currency</td>
-                     <td className="px-6 py-4 text-left  font-medium">Code</td>
-                    <td className="px-6 py-4 text-left  font-medium">Buy</td>
-                    <td className="px-6 py-4 text-left  font-medium">Sell</td>
-                </tr>
-                <tr className="border-b border-gray-300">
-                    <td className="px-6 py-4 flex items-center gap-4">
-                        <img src="{Flag1}" alt="Product" className="w-12 h-12 rounded-md"/>
-                        
-                    </td>
-                    <td className="px-6 py-4 ">CNY</td>
-                    <td className="px-6 py-4 text-bic-red">3,021</td>
-                    <td className="px-6 py-4">3,056</td>
-                 
-                </tr>
-
-                <tr className="border-b border-gray-300">
-                  <td className="px-6 py-4 flex items-center gap-4">
-                        <img src="{Flag2}" alt="Product" className="w-12 h-12 rounded-md"/>
-                        
-                    </td>
-                    <td className="px-6 py-4 ">USD</td>
-                    <td className="px-6 py-4 text-bic-red">3,021</td>
-                    <td className="px-6 py-4">3,056</td>
-                </tr>
-
-                <tr className="border-b border-gray-300">
-                     <td className="px-6 py-4 flex items-center gap-4">
-                        <img src="{Flag3}" alt="Product" className="w-12 h-12 rounded-md"/>
-                        
-                    </td>
-                    <td className="px-6 py-4 ">EUR</td>
-                    <td className="px-6 py-4 text-bic-red">3,021</td>
-                    <td className="px-6 py-4">3,056</td>
-                    
-                </tr>
-
-                <tr >
-                    <td className="px-6 py-4 flex items-center gap-4">
-                        <img src="{Flag4}" alt="Product" className="w-12 h-12 rounded-md"/>
-                        
-                    </td>
-                    <td className="px-6 py-4 ">THB</td>
-                    <td className="px-6 py-4 text-bic-red">3,021</td>
-                    <td className="px-6 py-4">3,056</td>
-                   
-                </tr>
-
-                
-            </tbody>
+  return (
+    <div className="w-full justify-center">
+    
+      <div className="p-5">
+        <table className="w-full">
+          <tbody>
+            <tr className="text-bic-navy border-b border-gray-300">
+              <td className="px-6 py-4 text-left font-medium">Currency</td>
+              <td className="px-6 py-4 text-left font-medium">Code</td>
+              <td className="px-6 py-4 text-left font-medium">Buy</td>
+              <td className="px-6 py-4 text-left font-medium">Sell</td>
+            </tr>
+            <tr className="border-b border-gray-300">
+              <td className="px-6 py-4">CNY</td>
+              <td className="px-6 py-4">CNY</td>
+              <td className="px-6 py-4 text-bic-red">3,021</td>
+              <td className="px-6 py-4">3,056</td>
+            </tr>
+            <tr className="border-b border-gray-300">
+              <td className="px-6 py-4">USD</td>
+              <td className="px-6 py-4">USD</td>
+              <td className="px-6 py-4 text-bic-red">3,021</td>
+              <td className="px-6 py-4">3,056</td>
+            </tr>
+            <tr className="border-b border-gray-300">
+              <td className="px-6 py-4">EUR</td>
+              <td className="px-6 py-4">EUR</td>
+              <td className="px-6 py-4 text-bic-red">3,021</td>
+              <td className="px-6 py-4">3,056</td>
+            </tr>
+            <tr className="border-b border-gray-300">
+              <td className="px-6 py-4">THB</td>
+              <td className="px-6 py-4">THB</td>
+              <td className="px-6 py-4 text-bic-red">3,021</td>
+              <td className="px-6 py-4">3,056</td>
+            </tr>
+            <tr>
+              <td className="px-6 py-4">LAK</td>
+              <td className="px-6 py-4">LAK</td>
+              <td className="px-6 py-4 text-bic-red">19,000</td>
+              <td className="px-6 py-4">19,200</td>
+            </tr>
+          </tbody>
         </table>
-    </div>
+      </div>
+
+      {/* Converter */}
+      <div className="w-full max-w-xl mx-auto m-4">
+        <p className="text-bic-navy text-xs font-bold text-center border-b p-3">
+          Currency Converter
+        </p>
 
 
-           
-        <div className="w-full max-w-xl mx-auto m-4">
-            <p className="text-bic-navy text-xs font-bold text-center border-b p-3">
-              Currency Converter
-            </p>
-            <div className="flex flex-col items-center justify-between">
-                
-                
-                {/*From Input */}
-                <div className="w-full max-w-xs min-w-[200px] mt-4">
-                    
-                    <div className="relative mt-2">
-                        <input
-                            type="text"
-                            className="w-full h-10 pl-3 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
-                            placeholder="1,000" 
-                        />
-                        <div className="absolute top-2 right-0 flex items-center pr-3">
-                            <div className="h-6 border-l border-slate-200 mr-2"></div>
-                           
-                            <button onClick={toggleDropdown} className="dropdownButton h-full text-sm flex justify-center items-center bg-transparent text-slate-700 focus:outline-none">
-                                <span className="dropdownSpan">USD</span>
-                                <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    fill="none" 
-                                    viewBox="0 0 24 24" 
-                                    stroke-width="1.5" 
-                                    stroke="currentColor" 
-                                    className="h-4 w-4 ml-1">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </button>
+        
 
-                            <div className="dropdownMenu min-w-[150px] overflow-hidden absolute left-0 w-full mt-10 hidden bg-white border border-slate-200 rounded shadow-lg z-10">
-                            
-                         
+        <div className="flex flex-col items-center">
+          {/* From */}
+          <div className="w-full max-w-xs mt-4">
+            <div className="relative">
+              <input
+                type="number"
+                value={amount}
+                onChange={(e) => handleAmountChange(Number(e.target.value))}
+                className="w-full h-10 pl-3 border border-gray-300 rounded shadow-sm"
+                placeholder="Enter amount"
+              />
+              <select
+                value={fromCurrency}
+                onChange={(e) => handleFromChange(e.target.value)}
+                className="absolute  right-2 p-2   rounded "
+              >
+                {currencyOptions.map((cur) => (
+                  <option key={cur} value={cur}>
+                    {cur}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
 
-                            </div>
-                        </div> 
-                    </div>   
-                </div>
-
-                {/*Swap Icon */}
-                <div className="flex items-center justify-center mt-6">
-                    <button className="p-2 rounded-full border border-slate-300 bg-white hover:bg-slate-100 shadow-sm">
-                        <svg 
+          {/* Swap */}
+          <div className="flex items-center justify-center mt-6">
+            <button
+              onClick={handleSwap}
+              className="p-2 rounded-full border border-slate-300  bg-white hover:bg-slate-100 shadow-sm"
+            >
+               <svg 
                             xmlns="http://www.w3.org/2000/svg" 
                             fill="none" 
                             viewBox="0 0 24 24" 
@@ -141,70 +141,40 @@ function ExchangeRate () {
                         >
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5" />
                         </svg>
-                    </button>
-                </div>
-                {/*To Input */}
-            
-                <div className="w-full max-w-xs min-w-[200px] -mt-2">
-                    
-                    <div className="relative mt-2">
-                        <input
-                            type="text"
-                            className="w-full h-10 pl-3 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
-                            placeholder="1,000" 
-                        />
-                        <div className="absolute top-2 right-0 flex items-center pr-3">
-                            <div className="h-6 border-l border-slate-200 mr-2"></div>
-                            <button className="dropdownButton h-full text-sm flex justify-center items-center bg-transparent text-slate-700 focus:outline-none">
-                                <span className="dropdownSpan">EUR</span>
-                                <svg 
-                                    xmlns="http://www.w3.org/2000/svg" 
-                                    fill="none" 
-                                    viewBox="0 0 24 24" 
-                                    stroke-width="1.5" 
-                                    stroke="currentColor" 
-                                    className="h-4 w-4 ml-1"
-                                >
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                                </svg>
-                            </button>
-                            <div className="dropdownMenu min-w-[150px] overflow-hidden absolute left-0 w-full mt-10 hidden bg-white border border-slate-200 rounded shadow-lg z-10">
-                                <ul className="dropdownOptions">
-                                    <li className="px-4 py-2 text-slate-800 hover:bg-slate-100 text-sm cursor-pointer" data-value="USD">USD</li>
-                                    <li className="px-4 py-2 text-slate-800 hover:bg-slate-100 text-sm cursor-pointer" data-value="EUR">EUR</li>
-                                    <li className="px-4 py-2 text-slate-800 hover:bg-slate-100 text-sm cursor-pointer" data-value="CAD">CAD</li>
-                                    <li className="px-4 py-2 text-slate-800 hover:bg-slate-100 text-sm cursor-pointer" data-value="RON">RON</li>
-                                </ul>
-                                <label htmlFor="curen">Currency
-                                <select name="selectedcurrency" id="">
-                                    <option value="usd">USD</option>
-                                    <option value="eur">EUR</option>
-                                    <option value="thb">THB</option>
-                                    <option value="lak">LAK</option>
-                                    <option value="cny">CNY</option>
-                                </select></label>
+            </button>
+          </div>
 
-                          
+        
 
-
-
-
-
-
-                            </div>
-                        </div> 
-                    </div>   
-                </div>
+          {/* To */}
+          <div className="w-full max-w-xs mt-4">
+            <div className="relative">
+              <input
+                type="text"
+                readOnly
+                value={result !== null ? result.toFixed(2) : ""}
+                className="w-full h-10 pl-3 border border-gray-300 rounded shadow-sm"
+                placeholder=""
+              />
+              <select
+                value={toCurrency}
+                onChange={(e) => handleToChange(e.target.value)}
+                className="absolute top-1 right-2 rounded p-1"
+              >
+                {currencyOptions.map((cur) => (
+                  <option key={cur} value={cur}>
+                    {cur}
+                  </option>
+                ))}
+              </select>
             </div>
+          </div>
 
-           
-           
+        
         </div>
-
-
-        </div>
-       
-    );
+      </div>
+    </div>
+  );
 }
 
-export default ExchangeRate
+export default ExchangeRate;

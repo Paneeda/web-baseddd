@@ -12,7 +12,6 @@ import SliderImg3 from "/lg/bic-care-1.png";
 import ImgSliderr from '../../components/Carousel/imgslider';
 
 import CardList from "../../components/Card/main"
-import Footer from '../../components/Footer/main';
 
 const IMAGES = [SlideImg1, SliderImg2, SliderImg3]
 
@@ -133,9 +132,7 @@ const Home: React.FC = () => {
 
             </div>
 
-            <div className='pt-30'>
-                <Footer />
-            </div>
+  
 
 
 

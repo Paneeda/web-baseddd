@@ -4,7 +4,6 @@ import History from '../../components/aboutus/History';
 import { useTranslation } from 'react-i18next';
 import Orgchart from '../../components/aboutus/Orgchart';
 import AnnualReport from '../../components/aboutus/Annualreport';
-import Footer from '../../components/Footer/main';
 
 const AboutUs: React.FC = () => {
     const { t } = useTranslation();
@@ -50,10 +49,7 @@ const AboutUs: React.FC = () => {
             <div>
                 <AnnualReport />
             </div>
-            <div className='pt-30'>
-                <Footer />
-            </div>
-
+        
 
 
         </div>
