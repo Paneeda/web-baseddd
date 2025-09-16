@@ -2,12 +2,51 @@
     "Themes": "ຮູບແບບ",
     "Home": "ໜ້າຫຼັກ",
     "Search": "ຄົ້ນຫາ",
-    "Aboutus": "ກ່ຽວກັບ" ,
+    "Aboutus": "ກ່ຽວກັບເຮົາ" ,
     "News": "ຂ່າວສານ",
     "Product&Service": "ຜະລິດຕະພັນ ແລະ ການບໍລິການ",
+    "Event&Annoucement": "ກິດຈະກຳ ແລະ ຂ່າວສານ",
     "Forms": "ແບບຟອມ",
     "Career": "ສະໝັກວຽກ",
     "ContactUs": "ຕິດຕໍ່ພວກເຮົາ",
-    "Event&Annoucement": "ກິດຈະກຳ ແລະ ຂ່າວສານ"
+    "Language": "ພາສາ",
+    "Loan": "ສິນເຊື່ອ",
+    "Deposit": "ຝາກ",
+    "Remittance": "ແລກປ່ຽນ",
+    "Other": "ອື່ນໆ",
 
+    "OnlineForms": "ແບບຟອມອອນລາຍ",
+
+    "QuickLinks": "ເມນູລັດ",
+    "BICHQ": "ສຳນັກງານໃຫຍ່ BIC",
+    "Email": "ອີເມວ",
+    "FollowUs": "ຕິດຕໍ່ພວກເຮົາ",
+
+    "EmailEnquiry": "enquiry@biclaos.com",
+    "PhoneEnquiry": "+856 21 213 111",
+
+    "BankServices": "ບໍລິການທາງທະນາຄານ",
+    "ForeignExchange": "ການແລກປ່ຽນເງິນຕາຕ່າງປະເທດ",
+    "InterestRates": "ອັດຕາດອກເບີ້ຍ",
+
+    "BankingHours": "ເວລາເປິດບໍລິການ",
+    "BankOpenTime": "ຈັນ - ສຸກ: 8:00 ໂມງເຊົ້າ - 5:00 ໂມງແລງ",
+    "BankCloseTime": "ເສົາ: 8:00 ໂມງເຊົ້າ - 12:00 ໂມງແລງ",
+
+    "ATMLocation": "ສະຖານທີ່ ATM",
+    "FindATMLocation": "ຄົ້ນຫາສະຖານທີ່ ATM",
+
+    "CustomerService": "ບໍລິການລູກຄ້າ",
+    "SupportTime": "ບໍລິການຕະຫຼອດ 24/7",
+    "Hotline": "ສາຍດ່ວນ: +856 21 217 777",
+
+    "MobileBanking": "ບໍລິການເທີງມືຖື",
+    "DownloadOurApp": "ດາວໂຫລດແອັບພິເຄຊັນຂອງເຮົາ ເພື່ອຄວາມສະດວກໃນການໃຊ້ບໍລິການ",
+
+    
+    "Copyright": "ສະຫງວນ ລິຂະສິດ © 2025 ໂດຍ ທະນາຄານ ບີໄອຊີ",
+    "PrivacyPolicy": "ນະໂຍບາຍທະນາຄານ",
+    "TermsOfService": "ເງື່ອນໄຂການໃຊ້ງານ"
+
+    
 }

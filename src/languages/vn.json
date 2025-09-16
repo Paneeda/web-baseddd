@@ -1,5 +1,18 @@
 {
-    "Themes": "Mẫu",
+    "Themes": "Màu",
     "Home": "Trang chủ",
-    "Search": "Tìm kiếm"
+    "Search": "Tìm kiếm",
+    "Aboutus": "Về chúng tôi",
+    "News": "Tin tức",
+    "Product&Service": "Sản phẩm & Dịch vụ",
+    "Event&Annoucement": "Sự kiện & Thông báo",
+    "Forms": "Biểu mẫu",
+    "Career": "Nghề nghiệp",
+    "ContactUs": "Liên hệ với chúng tôi",
+    "Language": "Ngôn ngữ",
+    "Loan": "Khoản vay",
+    "Deposit": "Tiền gửi",
+    "Remittance": "Chuyển tiền",
+    "Other": "Khác"
+
 }

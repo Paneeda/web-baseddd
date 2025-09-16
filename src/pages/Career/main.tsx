@@ -4,9 +4,6 @@ import fileicon from "/lg/file-icon.png"
 
 const Career: React.FC = () => {
 
-
-
-
     return (
         <div>
             <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy">Careers</h2>
@@ -28,14 +25,6 @@ const Career: React.FC = () => {
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
 
             <div className="relative overflow-x-auto">
                 <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
@@ -154,7 +143,7 @@ const Career: React.FC = () => {
                 </table>
             </div>
 
-         
+
         </div>
 
     )

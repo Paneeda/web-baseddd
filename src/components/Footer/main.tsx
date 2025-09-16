@@ -1,196 +1,221 @@
-import Logo from "/lg/bic_1_1.png"
-import IconWa from "../../assets/icons/whatsapp.svg"
-import IconYou from "../../assets/icons/youtube.svg"
-import IconIg from "../../assets/icons/instagram.svg"
-import IconFb from "../../assets/icons/facebook.svg"
-import IconAdd from "../../assets/icons/mapmarker.svg"
-import IconPhone from "../../assets/icons/phonecall.svg"
-import IconMail from "../../assets/icons/envelope.svg"
-import IconApp from "../../assets/icons/applestore.svg"
-import IconPl from "../../assets/icons/ggplaystore.svg"
-import IconHu from "../../assets/icons/huawei.svg"
+import Logo from "/lg/bic_1_1.png";
+import IconWa from "../../assets/icons/whatsapp.svg";
+import IconYou from "../../assets/icons/youtube.svg";
+import IconIg from "../../assets/icons/instagram.svg";
+import IconFb from "../../assets/icons/facebook.svg";
+import IconAdd from "../../assets/icons/mapmarker.svg";
+import IconPhone from "../../assets/icons/phonecall.svg";
+import IconMail from "../../assets/icons/envelope.svg";
+import IconApp from "../../assets/icons/applestore.svg";
+import IconPl from "../../assets/icons/ggplaystore.svg";
+import IconHu from "../../assets/icons/huawei.svg";
+import { useTranslation } from "react-i18next";
+
+
+
 function Footer() {
+    const { t } = useTranslation();
 
     return (
-        <div>
-
-
-            <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6  py-3 max-sm:max-w-sm max-sm:mx-auto  border-t border-gray-300">
-
-
-                <div className="col-span-full   lg:col-span-2 lg:mb-0">
-
-                    <a className="" href="/">
-                        <img className="h-12 p-1 pl-30  " src={Logo} alt="Logo" />
-                    </a>
-
-
-
-                    <div className="flex pt-2 pr-7 space-x-4 sm:justify-center lg:mt-0  ">
-                        <a href="javascript:;" className="w-5 h-5 rounded-full bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark">
-                            <img className="w-3 h-3" src={IconFb} alt="" />
-
+        <footer className="bg-bic-bg border-t border-gray-200">
+            {/* Top section */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-y-8 gap-x-8">
+                    {/* Brand + social */}
+                    <div className="sm:col-span-2">
+                        <a href="/" aria-label="BIC Bank homepage">
+                            <img className="h-10 w-auto" src={Logo} alt="BIC Bank" />
                         </a>
-                        <a href="javascript:;" className="w-5 h-5 rounded-full bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark">
-                            <img className="w-3 h-3 text-white" src={IconIg} />
-
-
-                        </a>
-
-                        <a href="javascript:;" className="w-5 h-5 rounded-full bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark">
-                            <img className="w-3 h-3 text-white" src={IconYou} />
-
-
-                        </a>
-
-                        <a href="javascript:;" className="w-5 h-5 rounded-full bg-bic-bg flex justify-center items-center ">
-                            <img className="w-2 h-2" src={IconWa}>
-
-                            </img>
-                        </a>
+                        <div className="flex pt-4 space-x-3 sm:justify-start">
+                            <a
+                                href="#"
+                                aria-label="Facebook"
+                                className="w-6 h-6 rounded-full bg-bic-bg flex justify-center items-center hover:bg-bic-navy transition-colors"
+                            >
+                                <img className="w-4 h-4" src={IconFb} alt="Facebook" />
+                            </a>
+                            <a
+                                href="#"
+                                aria-label="Instagram"
+                                className="w-6 h-6 rounded-full bg-bic-bg flex justify-center items-center hover:bg-bic-navy transition-colors"
+                            >
+                                <img className="w-4 h-4" src={IconIg} alt="Instagram" />
+                            </a>
+                            <a
+                                href="#"
+                                aria-label="YouTube"
+                                className="w-6 h-6 rounded-full bg-bic-bg flex justify-center items-center hover:bg-bic-navy transition-colors"
+                            >
+                                <img className="w-4 h-4" src={IconYou} alt="YouTube" />
+                            </a>
+                            <a
+                                href="#"
+                                aria-label="WhatsApp"
+                                className="w-6 h-6 rounded-full bg-bic-bg flex justify-center items-center hover:bg-bic-navy transition-colors"
+                            >
+                                <img className="w-4 h-4" src={IconWa} alt="WhatsApp" />
+                            </a>
+                        </div>
                     </div>
 
-                </div>
-                {/*info */}
-
-                <div className="lg:mx-auto text-center ">
-                    <h6 className="text-sm text-gray-900 font-medium mb-4">Quick Links</h6>
-                    <ul className="text-xs  transition-all duration-500">
-                        <li className="mb-3"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">About Us</a></li>
-                        <li className="mb-3"><a href="javascript:;" className=" text-gray-600 hover:text-gray-900">Product & Services</a></li>
-                        <li className="mb-3"><a href="javascript:;" className=" text-gray-600 hover:text-gray-900">News & Updates</a></li>
-                        <li className="mb-3"><a href="javascript:;" className=" text-gray-600 hover:text-gray-900">Online Forms</a></li>
-
-                    </ul>
-                </div>
-
-                <div className="lg:mx-auto text-center ">
-                    <h6 className="text-sm text-gray-900 font-medium mb-4">Banking Services</h6>
-                    <ul className="text-xs  transition-all duration-500">
-                        <li className="mb-3"><a href="javascript:;" className=" text-gray-600 hover:text-gray-900">Loans & Financing</a></li>
-                        <li className="mb-3"><a href="javascript:;" className="text-gray-600 hover:text-gray-900">Foreign Exchange</a></li>
-
-                    </ul>
-                </div>
-
-                <div className="lg:mx-auto text-center">
-                    <h6 className="text-sm text-gray-900 font-medium mb-4">Contact Us</h6>
-                    <ul className="text-xs ">
-                        <li> <a href="javascript:;" className="text-gray-600 text-right mb-3 hover:text-gray-900 flex flex-row items-center gap-2">
-
-                            <img src={IconAdd} className=" h-2 w-2 " alt="" />
-                            BIC Headquaters</a>
-                        </li>
-                        <li className="mb-3"> <a href="javascript:;" className="text-gray-600 text-right mb-3 hover:text-gray-900 flex flex-row items-center gap-2">
-                            <img src={IconPhone} className=" h-2 w-2 " alt="" />
-                            Tel: +856 21 213 111</a></li>
-                        <li className="mb-3"> <a href="javascript:;" className="text-gray-600 text-right mb-3 hover:text-gray-900 flex flex-row items-center gap-2">
-                            <img src={IconMail} className=" h-3 w-3 " alt="" />
-                            enquiry@biclaos.com</a></li>
-
-                    </ul>
-                </div>
-
-
-
-
-
-
-
-            </div>
-
-            {/*info2 */}
-            <div className="border-t border-gray-300  flex flex-row gap-10 justify-center">
-                <div className="p-4">
-                    <p className="text-xs text-gray-900 font-medium "> Banking Hours</p>
-                    <ul className="text-xs  transition-all duration-500">
-                        <li className=""><a href="javascript:;" className="text-gray-600 text-xs hover:text-gray-900">Monday - Friday: 8:30 - 3:00 </a></li>
-                        <li className=""><a href="javascript:;" className="text-gray-600 text-xs hover:text-gray-900">Saturday & Sunday: Closed</a></li>
-
-
-                    </ul>
-
-
-
-                </div>
-
-                <div className="p-4">
-                    <p className="text-xs text-gray-900 font-medium "> ATM Location</p>
-                    <ul className="text-xs  transition-all duration-500">
-                        <li className=""><a href="javascript:;" className="text-gray-600 text-xs hover:text-gray-900">Our ATMs are available nationwide</a></li>
-                        <li className=""><a href="javascript:;" className="text-gray-600 text-xs hover:text-gray-900">Find nearest ATMs </a></li>
-
-
-                    </ul>
-
-
-
-                </div>
-                <div className="p-4">
-                    <p className="text-xs text-gray-900 font-medium "> Mobile Banking</p>
-                    <p className=""><a href="javascript:;" className="text-gray-600 text-xs hover:text-gray-900">Dowload Our App for Easy Banking</a></p>
-
-                    <div className="flex justify-center space-x-3 lg:mt-0   ">
-                        <a href="javascript:;" className="w-5 h-5 rounded-sm bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark">
-                            <img className="w-3 h-3" src={IconApp} alt="" />
-
-                        </a>
-                        <a href="javascript:;" className="w-5 h-5 rounded-sm bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark">
-                            <img className="w-3 h-3 " src={IconPl} />
-
-
-                        </a>
-
-                        <a href="javascript:;" className="w-5 h-5 rounded-sm bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark">
-                            <img className="w-3 h-3 " src={IconHu} />
-
-
-                        </a>
-
-
+                    {/* Quick Links */}
+                    <div className="text-center sm:text-left">
+                        <h6 className="text-sm text-gray-900 font-medium mb-4">{t("QuickLinks")}</h6>
+                        <ul className="text-xs space-y-3">
+                            <li>
+                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                    {t("Aboutus")}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                    {t("Product&Service")}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                    {t("News")}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                    {t("OnlineForms")}
+                                </a>
+                            </li>
+                        </ul>
                     </div>
 
+                    {/* Banking Services */}
+                    <div className="text-center sm:text-left">
+                        <h6 className="text-sm text-gray-900 font-medium mb-4">{t("BankingServices")}</h6>
+                        <ul className="text-xs space-y-3">
+                            <li>
+                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                    {t("Loan")}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                    {t("ForeignExchange")}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-
+                    {/* Contact Us */}
+                    <div className="text-center sm:text-left">
+                        <h6 className="text-sm text-gray-900 font-medium mb-4">{t("ContactUs")}</h6>
+                        <ul className="text-xs space-y-3">
+                            <li>
+                                <a
+                                    href="#"
+                                    className="text-gray-600 hover:text-gray-900 flex items-center justify-center sm:justify-start gap-2"
+                                >
+                                    <img src={IconAdd} className="h-3 w-3" alt="Address" />
+                                    {t("BICHQ")}
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="tel:+85621213111"
+                                    className="text-gray-600 hover:text-gray-900 flex items-center justify-center sm:justify-start gap-2"
+                                >
+                                    <img src={IconPhone} className="h-3 w-3" alt="Phone" />
+                                    {t("PhoneEnquiry")}
+                                </a>
+                            </li>
+                            <li>
+                                <a
+                                    href="mailto:enquiry@biclaos.com"
+                                    className="text-gray-600 hover:text-gray-900 flex items-center justify-center sm:justify-start gap-2"
+                                >
+                                    <img src={IconMail} className="h-3 w-3" alt="Email" />
+                                    {t("EmailEnquiry")}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div className="p-4">
-                    <p className="text-xs text-gray-900 font-medium  "> Customer Service</p>
-                    <p className=""><a href="javascript:;" className="text-gray-600 text-xs hover:text-gray-900 ">24/7 Customer Support</a></p>
-                    <p className=""><a href="javascript:;" className="text-bic-red text-xs hover:text-bic-red-light ">020 8850 7070; 020 8850 8080 </a></p>
-
-
-
-                </div>
-
-
-
-
-
-
             </div>
 
+            {/* Middle information row */}
+            <div className="border-t border-gray-200">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div>
+                            <p className="text-xs text-gray-900 font-medium">{t("BankingHours")}</p>
+                            <ul className="text-xs mt-2 space-y-1">
+                                <li>
+                                    <span className="text-gray-600">{t("BankOpenTime")}</span>
+                                </li>
+                                <li>
+                                    <span className="text-gray-600">{t("BankCloseTime")}</span>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <div>
+                            <p className="text-xs text-gray-900 font-medium">{t("ATMLocation")}</p>
+                            <ul className="text-xs mt-2 space-y-1">
+                                <li>
+                                    <span className="text-gray-600">{t("FindATMLocation")}</span>
+                                </li>
+                            </ul>
+                        </div>
 
+                        <div>
+                            <p className="text-xs text-gray-900 font-medium">{t("MobileBanking")}</p>
+                            <p className="text-xs text-gray-600 mt-2">{t("DownloadOurApp")}</p>
+                            <div className="flex justify-center sm:justify-center space-x-3 mt-3">
+                                <a
+                                    href="#"
+                                    aria-label="Download on the App Store"
+                                    className="w-7 h-7 rounded bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark transition-colors"
+                                >
+                                    <img className="w-4 h-4" src={IconApp} alt="App Store" />
+                                </a>
+                                <a
+                                    href="#"
+                                    aria-label="Get it on Google Play"
+                                    className="w-7 h-7 rounded bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark transition-colors"
+                                >
+                                    <img className="w-4 h-4" src={IconPl} alt="Google Play" />
+                                </a>
+                                <a
+                                    href="#"
+                                    aria-label="Download on Huawei AppGallery"
+                                    className="w-7 h-7 rounded bg-bic-bg flex justify-center items-center hover:bg-bic-navy-dark transition-colors"
+                                >
+                                    <img className="w-4 h-4" src={IconHu} alt="Huawei AppGallery" />
+                                </a>
+                            </div>
+                        </div>
 
+                        <div>
+                            <p className="text-xs text-gray-900 font-medium">{t("CustomerService")}</p>
+                            <p className="text-xs text-gray-600 mt-2">{t("SupportTime")}</p>
+                            <p className="text-xs text-bic-red mt-1">{t("Hotline")}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-
-            {/*foooot */}
+            {/* Bottom bar */}
             <div className="py-3 border-t bg-bic-bg border-gray-200">
-                <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">
-                    <span className="text-xs text-gray-500 ">Copyright © 2025 BIC Bank Lao Co.,Ltd.</span>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center flex-col gap-2 md:flex-row md:justify-between">
+                    <span className="text-xs text-gray-500">{t("Copyright")}</span>
                     <div className="gap-5 flex flex-row">
-                        <a href="" className="text-xs text-gray-500 ">Privacy Policy</a>
-                        <a href="" className="text-xs text-gray-500 ">Terms of Use</a>
-
+                        <a href="#" className="text-xs text-gray-500 hover:text-gray-700">
+                            {t("PrivacyPolicy")}
+                        </a>
+                        <a href="#" className="text-xs text-gray-500 hover:text-gray-700">
+                            {t("TermsOfService")}
+                        </a>
                     </div>
-
                 </div>
             </div>
-
-
-
-        </div>
+        </footer>
     );
 }
 
-export default Footer
+export default Footer;
