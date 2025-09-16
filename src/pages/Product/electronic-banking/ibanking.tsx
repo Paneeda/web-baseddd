@@ -46,8 +46,9 @@ function Ibanking () {
                     </div> 
                 </section>
 
+                  <h2 className="text-2xl md:text-3xl border-l-100   border-bic-navy">I-Banking Forms</h2>
                 <div>
-                  <h2 className="text-2xl md:text-3xl border-l-100  border-bic-navy">I-Banking Forms</h2>
+               
                   {/*items */}
                   <div className="p-10  grid grid-cols-3">
                      <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 

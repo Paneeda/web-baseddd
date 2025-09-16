@@ -22,14 +22,14 @@ const Home: React.FC = () => {
 
 
     return (
-        <div>
+        <div className=''>
 
             <ImgSliderr imageUrls={IMAGES} />
 
 
 
 
-            <h2 className="text-2xl  text-start my-10 border-l-100  border-bic-navy ">{t('Product&Service')}</h2>
+            <h2 className="text-2xl  text-start my-10 border-l-100 border-bic-navy ">{t('Product&Service')}</h2>
 
 
             <div className="flex flex-cols-2 gap-5 ">

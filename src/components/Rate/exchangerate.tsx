@@ -97,9 +97,6 @@ function ExchangeRate() {
           Currency Converter
         </p>
 
-
-        
-
         <div className="flex flex-col items-center">
           {/* From */}
           <div className="w-full max-w-xs mt-4">
