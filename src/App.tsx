@@ -4,13 +4,13 @@ import './App.css'
 import Header from './components/Header/main'
 import Theme from './theme/main'
 import Home from './pages/Home/main';
-import AboutUs from './pages/About_Us/main';
+import AboutUs from './pages/AboutUs/main';
 import News from './pages/News/main';
 import ProductMain from './pages/Product/main';
 import Forms from './pages/Forms/main';
 import Career from './pages/Career/main';
 import Footer from './components/Footer/main';
-import Contactus from './pages/contactUs/main';
+import Contactus from './pages/ContactUs/main';
 
 
 
@@ -23,10 +23,6 @@ function App() {
         <div className='sticky top-0 z-50 bg-white shadow'>
           <Header />
         </div>
-
-    
-    
-
 
         {/* Main Content */}
         <main className="flex-1 w-full">

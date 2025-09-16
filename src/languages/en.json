@@ -6,5 +6,46 @@
     "News": "News",
     "Product&Service": "Product & Service",
     "Event&Annoucement": "Event & Annoucement",
-    "ContactUs": "Contact Us"
+    "Forms": "Forms",
+    "Career": "Career",
+    "ContactUs": "Contact Us",
+    "Language": "Language",
+    "Loan": "Loan",
+    "Deposit": "Deposit",
+    "Remittance": "Remittance",
+    "Other": "Other",
+
+    "OnlineForms": "Online Forms",
+
+
+    "QuickLinks": "Quick Links",
+    "BICHQ": "BIC Headquarters",
+    "Email": "Email",
+    "FollowUs": "Follow Us",
+
+    "EmailEnquiry": "enquiry@biclaos.com",
+    "PhoneEnquiry": "+856 21 213 111",
+
+    "BankServices": "Bank Services",
+    "ForeignExchange": "Foreign Exchange",
+    "InterestRates": "Interest Rates",
+
+    "BankingHours": "Banking Hours",
+    "BankOpenTime": "Mon - Fri: 8:00 AM - 5:00 PM",
+    "BankCloseTime": "Sat: 8:00 AM - 12:00 PM",
+
+    "ATMLocation": "ATM Location",
+    "FindATMLocation": "Find ATM Locations",
+
+    "CustomerService": "Customer Service",
+    "SupportTime": "24/7 Customer Support",
+    "Hotline": "Hotline: +856 21 217 777",
+
+    "MobileBanking": "Mobile Banking",
+    "DownloadOurApp": "Download Our App for Easy Banking",
+
+    
+    "Copyright": "Copyright © 2025 BIC Bank. All rights reserved.",
+    "PrivacyPolicy": "Privacy Policy",
+    "TermsOfService": "Terms of Service"
 }
