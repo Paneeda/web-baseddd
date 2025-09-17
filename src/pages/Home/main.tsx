@@ -32,32 +32,14 @@ const Home: React.FC = () => {
             <h2 className="text-2xl  text-start my-10 border-l-100 border-bic-navy ">{t('Product&Service')}</h2>
 
 
-            <div className="flex flex-cols-2 gap-5 ">
+            <div className="grid grid-cols-1 lg:grid-cols-4  gap-5 ">
 
                 {/*product and service section */}
-                <div className="grid grid-cols-3 gap-7 pl-5">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:col-span-3 pl-2">
                     {/*Items */}
-                    <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
+                       <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
                         <a href="#">
-                            <img className="rounded-t-lg shadow-b " src={NewsImg} alt="" />
-                        </a>
-                        <div className="p-5">
-                            <a href="#">
-                                <h5 className="mb-2 text-xl max-w-50 tracking-tight text-gray-900 dark:text-white truncate">Promotion ITECC Mallllllllllll</h5>
-                            </a>
-
-                            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                Read more
-                                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
-                        <a href="#">
-                            <img className="rounded-t-lg p=1" src={NewsImg2} alt="" />
+                            <img className="rounded-t-lg" src={NewsImg2} alt="" />
                         </a>
                         <div className="p-5">
                             <a href="#">
@@ -74,7 +56,24 @@ const Home: React.FC = () => {
 
                     <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
                         <a href="#">
-                            <img className="rounded-t-lg p=1" src={NewsImg2} alt="" />
+                            <img className="rounded-t-lg" src={NewsImg2} alt="" />
+                        </a>
+                        <div className="p-5">
+                            <a href="#">
+                                <h4 className="mb-2 text-xl max-w-50 tracking-tight text-gray-900 dark:text-white truncate">Innovating Cross-Border Payments First Time in Laos for ggggggggggggVisa B2B</h4>
+                            </a>
+                            <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                Read more
+                                <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
+                        <a href="#">
+                            <img className="rounded-t-lg p11" src={NewsImg2} alt="" />
                         </a>
                         <div className="p-5">
                             <a href="#">
@@ -111,7 +110,7 @@ const Home: React.FC = () => {
 
                 </div>
 
-                <div>
+                <div className=''>
                     <Rates />
 
                 </div>
@@ -124,7 +123,7 @@ const Home: React.FC = () => {
             <h2 className="text-2xl  text-start my-10 border-l-100  border-bic-navy ">{t('Event&Annoucement')}</h2>
 
 
-            <div className=''>
+            <div className='lg:col-span-1'>
 
                 <CardList />
 
@@ -132,7 +131,10 @@ const Home: React.FC = () => {
 
             </div>
 
-  
+         
+
+
+
 
 
 

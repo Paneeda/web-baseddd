@@ -10,7 +10,13 @@ import ProductMain from './pages/Product/main';
 import Forms from './pages/Forms/main';
 import Career from './pages/Career/main';
 import Footer from './components/Footer/main';
-import Contactus from './pages/ContactUs/main';
+import Contactus from './pages/contactUs/main';
+import Loans from './pages/Product/loans';
+import Deposit from './pages/Product/deposit';
+import Atm from './pages/Product/atm';
+import FeeandCharge from './pages/Product/feencharge';
+import Ibanking from './pages/Product/electronic-banking/ibanking';
+import BicCare from './pages/Product/electronic-banking/biccare';
 
 
 
@@ -35,6 +41,12 @@ function App() {
             <Route path='/forms' element={<Forms/>} />
             <Route path='/career' element={<Career/>} />
             <Route path='/contactus' element={<Contactus/>} />
+            <Route path='/loan' element={<Loans/>} />
+            <Route path='/deposit' element={<Deposit/>}/>
+            <Route path='/atm' element={<Atm/>}/>
+            <Route path='/feencharge' element={<FeeandCharge/>}/>
+            <Route path='/ibanking' element={<Ibanking/>}/>
+            <Route path='/bic-care' element={<BicCare/>}/>
         
           </Routes>
         </main>

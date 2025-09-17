@@ -11,7 +11,17 @@ const News: React.FC = () => {
     return (
         <div>
 
-
+                <div className="mb-8">
+            <h3 className="text-xl font-medium text-bic-navy mb-4 font-lao">News</h3>
+            <div className="bg-white rounded-lg p-8 border-b  border-gray-300">
+              <div className="flex flex-wrap justify-items-center items-center gap-3">
+                <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-lao">Loans</span>
+                <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-lao">Deposit</span>
+                <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-lao">Promotion</span>
+                <span className="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full font-lao">Event</span>
+              </div>
+            </div>
+          </div>
 
             <section className="  ">
                 <div className="px-10 p-5 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -136,7 +146,7 @@ const News: React.FC = () => {
                 </div>
 
             </section>
-            
+
         </div>
     )
 }

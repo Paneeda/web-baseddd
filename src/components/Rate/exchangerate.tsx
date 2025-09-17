@@ -48,8 +48,8 @@ function ExchangeRate() {
   return (
     <div className="w-full justify-center">
     
-      <div className="p-5">
-        <table className="w-full">
+      <div className="justify-center">
+        <table className="">
           <tbody>
             <tr className="text-bic-navy border-b border-gray-300">
               <td className="px-6 py-4 text-left font-medium">Currency</td>
