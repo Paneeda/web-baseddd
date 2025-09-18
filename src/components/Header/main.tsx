@@ -4,6 +4,7 @@ import BICLogo1 from '/lg/bic_1_1.png';
 import BICLogo2 from '/lg/bic_1_2.png';
 import MenuIcon from '../../assets/icons/hamburger.svg';
 import CloseIcon from '../../assets/icons/closex.svg';
+import Midmenu from '../midmenubar/main';
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -49,9 +50,9 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="relative z-20 bg-white shadow">
-      <nav className="w-full mx-auto px-3 sm:px-4 lg:px-8 ">
-        <div className="flex items-center justify-between h-16  ">
+    <header className="relative z-20 bg-white shadow ">
+      <nav className="w-full mx-auto px-3 sm:px-4 lg:px-8  ">
+        <div className="flex items-center justify-between h-16 ">
           <div className="flex items-center">
             <a className="flex-shrink-0" href="/" aria-label="BIC Home">
               <img className="block lg:hidden h-10 w-auto" src={BICLogo2} alt="BIC Logo" />
@@ -73,44 +74,19 @@ const Header: React.FC = () => {
                   <a href="/news" className=" px-3 py-2  rounded-md text-sm
                    font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('News')}</a>
                 </div>
+         
 
-                <div className="relative group">
-                  <a href="#" className=" px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-bic-navy
-                   hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('Product&Service')}</a>
+              </div>
 
-                  <div className="absolute left-0 mt-2 w-56 bg-white shadow-lg py-2 z-50 hidden group-hover:block border border-gray-100 rounded-md">
 
-                    <div className='relative group'>
-                         <a href="#" className="ml-2 px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('ElectronicBanking')}</a>
 
-                    <div className="absolute left-56 w-57  bg-white  py-2 z-50 hidden group-hover:block border border-gray-100 transition rounded-tr-lg">
-                      <a href="/ibanking" className='block px-4 py-2 text-sm text-gray-700 hover:bg-bic-navy hover:text-white' >I-Banking</a>
-                      <a href="/bic-care" className='block px-4 py-2 text-sm text-gray-700  hover:bg-bic-navy hover:text-white'>BIC Care</a>
-                    </div>
-                    </div>
+              
 
-               
+            </div>
 
-                    <a href="/loan" className="block px-4 py-2 text-sm text-gray-700 hover:bg-bic-navy hover:text-white">{t('Loans')}</a>
-                    <a href="/deposit" className="block px-4 py-2 text-sm text-gray-700 hover:bg-bic-navy hover:text-white">{t('Deposit')}</a>
-                    <a href="/atm" className="block px-4 py-2 text-sm text-gray-700 hover:bg-bic-navy hover:text-white">{t('ATMLocation')}</a>
-                    <a href="/remittance" className="block px-4 py-2 text-sm text-gray-700 hover:bg-bic-navy hover:text-white">{t('Remittance')}</a>
-                    <a href="/feencharge" className="block px-4 py-2 text-sm text-gray-700 hover:bg-bic-navy hover:text-white">{t('Fee&Charge')}</a>
-                    <a href="/other" className="block px-4 py-2 text-sm text-gray-700 hover:bg-bic-navy hover:text-white">{t('Other')}</a>
-                    
-                  </div>
-                </div>
-
-                <div className="relative">
-                  <a href="/forms" className="px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('Forms')}</a>
-                </div>
-
-                <div className="relative">
-                  <a href="/career" className=" px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('Career')}</a>
-                </div>
-
-                <div className="relative">
-                  <a href="/contactus" className="px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('ContactUs')}</a>
+            <div className='flex flex-row  gap-3 items-center ml-85'>
+                      <div className="">
+                  <a href="/contactus" className=" rounded-md text-sm font-medium text-gray-800 hover:text-bic-light">{t('ContactUs')}</a>
                 </div>
 
                 {/* Desktop searchbar */}
@@ -126,9 +102,10 @@ const Header: React.FC = () => {
                     </div>
                   </form>
                 </div>
-              </div>
-
             </div>
+
+
+
           </div>
 
           {/* Right: Language and Mobile Toggle */}
@@ -255,8 +232,16 @@ const Header: React.FC = () => {
             </div>
           </div>
         </div>
+
+        <div>
+          <Midmenu/>
+          
+        </div>
       </nav>
+
+
     </header>
+    
   );
 }
 

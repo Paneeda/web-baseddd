@@ -6,7 +6,7 @@ import Logo from "/lg/bic_1_2.png"
 
 function Deposit() {
     return (
-        <div className=" h-400">
+        <div className=" h-400 pt-15">
             <div className="bg-violet-600  ">
                 <img src={DepImg} alt="" />
             </div>

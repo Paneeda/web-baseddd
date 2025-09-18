@@ -10,7 +10,7 @@ const ProductMain: React.FC = () => {
 
     return (
   <div>
-<Ibanking/>
+
 
    
   </div>

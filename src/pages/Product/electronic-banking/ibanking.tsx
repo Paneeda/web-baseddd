@@ -5,7 +5,7 @@ import fileicon from "/lg/file-icon.png"
 
 function Ibanking () {
     return (
-        <div>
+        <div className="pt-18">
 
 
 

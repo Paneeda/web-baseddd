@@ -2,7 +2,7 @@ import LoansImg from "/lg/loans-1.png"
 import Logo from "/lg/bic_1_2.png"
 function Loans () {
     return(
-        <div className=" h-400">
+        <div className=" h-400 pt-17">
                 <div className="bg-violet-600  "> 
                     <img src={LoansImg} alt="" />
                 </div>

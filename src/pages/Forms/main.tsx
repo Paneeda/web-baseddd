@@ -15,11 +15,11 @@ const Forms: React.FC = () => {
 
 
 
-        <div className="">
+        <div className="pt-15">
             <h2 className="text-2xl  text-start my-10 border-l-100  border-bic-navy ">Download Resources</h2>
 
-            <div className="">
-                <h3 className="text-bic-navy font-medium text-2xl">Application Forms</h3>
+            <div className="rounded-lg shadow mb-10">
+                <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl">Application Forms</h3>
                 <div className="p-10 grid grid-cols-3">
                     {/*item*/}
                     <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -94,8 +94,8 @@ const Forms: React.FC = () => {
 
 
 
-            <div className="">
-                <h3 className="text-bic-navy font-medium text-2xl  ">Internet Banking Forms</h3>
+            <div className="rounded-lg shadow mb-10">
+                <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl ">Internet Banking Forms</h3>
                 <div className="p-10 grid grid-cols-3 ">
                     {/*item*/}
                     <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
@@ -240,8 +240,8 @@ const Forms: React.FC = () => {
 
             </div>
 
-            <div className="">
-                <h3 className="text-bic-navy font-medium text-2xl">Fee & Charges</h3>
+            <div className="rounded-lg shadow mb-10">
+                <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl">Fee & Charges</h3>
 
                 <div className="p-10 grid grid-cols-3">
                     {/*item*/}
@@ -265,8 +265,8 @@ const Forms: React.FC = () => {
 
             </div>
 
-            <div className="">
-                <h3 className="text-bic-navy font-medium text-2xl">Discrepancy Forms</h3>
+            <div className="rounded-lg shadow mb-10">
+                <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl">Discrepancy Forms</h3>
                 <div className="p-10 grid grid-cols-3">
                     {/*item*/}
                     <div className="relative my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">

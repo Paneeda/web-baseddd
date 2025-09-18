@@ -2,7 +2,7 @@
 
 function Atm () {
     return (
-        <div className="px-80" >
+        <div className="px-80 pt-19" >
          
             <div className="   ">
             <table className=" bg-white text-center shadow-md rounded-lg border border-gray-200 ">

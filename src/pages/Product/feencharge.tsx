@@ -3,10 +3,10 @@ import fileicon from "/lg/file-icon.png"
 
 function FeeandCharge (){
     return (
-        <div>
+        <div className="pt-15">
                <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy  dark:text-gray-200">Fee & Charges</h2>
 
-               <div className="p-10 grid grid-cols-3">
+               <div className="p-10 grid grid-cols-3 rounded-lg shadow">
                 {/*item*/}
                     <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
             

@@ -11,7 +11,7 @@ const AboutUs: React.FC = () => {
 
 
     return (
-        <div className="">
+        <div className="pt-16">
             <div className="bg-white   border-b border-gray-300 sticky top-0 z-40">
 
 

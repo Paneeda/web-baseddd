@@ -3,7 +3,7 @@ import Imgsec from "/lg/bic-care-2.png"
 
 function BicCare () {
     return(
-        <div>
+        <div className="pt-18">
 
             <div className="">
                 <section className="flex">

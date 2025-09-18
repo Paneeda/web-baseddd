@@ -5,7 +5,7 @@ import fileicon from "/lg/file-icon.png"
 const Career: React.FC = () => {
 
     return (
-        <div>
+        <div className="pt-17">
             <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy">Careers</h2>
             <div className="flex flex-row ">
                 <h3 className="p-5 pt-9 font-medium text-2xl ">Job Appliacation Form:</h3>

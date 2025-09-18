@@ -17,6 +17,8 @@ import Atm from './pages/Product/atm';
 import FeeandCharge from './pages/Product/feencharge';
 import Ibanking from './pages/Product/electronic-banking/ibanking';
 import BicCare from './pages/Product/electronic-banking/biccare';
+import ServiceUnits from './components/seviceunits/main';
+
 
 
 
@@ -29,6 +31,8 @@ function App() {
         <div className='sticky top-0 z-50 bg-white shadow'>
           <Header />
         </div>
+        
+   
 
         {/* Main Content */}
         <main className="flex-1 w-full">
@@ -47,7 +51,7 @@ function App() {
             <Route path='/feencharge' element={<FeeandCharge/>}/>
             <Route path='/ibanking' element={<Ibanking/>}/>
             <Route path='/bic-care' element={<BicCare/>}/>
-        
+            <Route path='serviceunit' element={<ServiceUnits/>}/>
           </Routes>
         </main>
 

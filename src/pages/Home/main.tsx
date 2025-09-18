@@ -12,6 +12,7 @@ import SliderImg3 from "/lg/bic-care-1.png";
 import ImgSliderr from '../../components/Carousel/imgslider';
 
 import CardList from "../../components/Card/main"
+import Midmenu from '../../components/midmenubar/main';
 
 const IMAGES = [SlideImg1, SliderImg2, SliderImg3]
 
@@ -23,9 +24,15 @@ const Home: React.FC = () => {
 
     return (
         <div className=''>
-
+            <div className='pt-16'>
+                
             <ImgSliderr imageUrls={IMAGES} />
 
+  
+            </div>
+
+  
+ 
 
 
 
@@ -37,7 +44,7 @@ const Home: React.FC = () => {
                 {/*product and service section */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:col-span-3 pl-2">
                     {/*Items */}
-                       <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
+                    <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
                         <a href="#">
                             <img className="rounded-t-lg" src={NewsImg2} alt="" />
                         </a>
@@ -131,7 +138,7 @@ const Home: React.FC = () => {
 
             </div>
 
-         
+
 
 
 

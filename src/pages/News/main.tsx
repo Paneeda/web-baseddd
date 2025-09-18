@@ -9,7 +9,7 @@ const News: React.FC = () => {
 
 
     return (
-        <div>
+        <div className="pt-16">
 
                 <div className="mb-8">
             <h3 className="text-xl font-medium text-bic-navy mb-4 font-lao">News</h3>

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import ExchangeRate from "./exchangerate";
 import DepositRate from "./depositrate";
-// import InterestRate from "./interestrate" // <-- create this component too
+
 
 function Rates() {
   const [activeTab, setActiveTab] = useState<"exchange" | "interest">("exchange");
