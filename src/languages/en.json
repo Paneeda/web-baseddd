@@ -49,5 +49,11 @@
     
     "Copyright": "Copyright © 2025 BIC Bank. All rights reserved.",
     "PrivacyPolicy": "Privacy Policy",
-    "TermsOfService": "Terms of Service"
+    "TermsOfService": "Terms of Service",
+
+
+    "Country": "Country",
+    "Currency": "Currency",
+    "Buy": "Buy",
+    "Sell": "Sell"
 }
