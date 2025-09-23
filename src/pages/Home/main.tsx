@@ -12,7 +12,6 @@ import SliderImg3 from "/lg/bic-care-1.png";
 import ImgSliderr from '../../components/Carousel/imgslider';
 
 import CardList from "../../components/Card/main"
-import Midmenu from '../../components/midmenubar/main';
 
 const IMAGES = [SlideImg1, SliderImg2, SliderImg3]
 

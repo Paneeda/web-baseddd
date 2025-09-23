@@ -29,6 +29,7 @@ function ExchangeRate() {
 
   const GetExchangeRate = async () => {
     const rawData = await fetchExchangeRate();
+    
     if (rawData?.data?.rates) {
       const ratesWithDate = rawData.data.rates.map((rate: any) => ({
         ...rate,

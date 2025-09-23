@@ -6,7 +6,7 @@ import Logo from "/lg/bic_1_2.png"
 
 function Deposit() {
     return (
-        <div className=" h-400 pt-15">
+        <div className="pt-15">
             <div className="bg-violet-600  ">
                 <img src={DepImg} alt="" />
             </div>
@@ -19,7 +19,7 @@ function Deposit() {
 
 
                     <section>
-                        <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-10 ">
+                        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3  gap-10 ">
 
 
                             <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow-xs">

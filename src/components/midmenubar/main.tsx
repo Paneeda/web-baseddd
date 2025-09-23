@@ -1,4 +1,4 @@
-import Deposit from "../../pages/Product/deposit";
+
 import { useTranslation } from 'react-i18next';
 
 function Midmenu() {

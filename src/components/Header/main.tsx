@@ -84,7 +84,7 @@ const Header: React.FC = () => {
 
             </div>
 
-            <div className='flex flex-row  gap-3 items-center ml-85'>
+            <div className='flex flex-row  gap-3 items-center ml-85 max-sm:hidden'>
                       <div className="">
                   <a href="/contactus" className=" rounded-md text-sm font-medium text-gray-800 hover:text-bic-light">{t('ContactUs')}</a>
                 </div>

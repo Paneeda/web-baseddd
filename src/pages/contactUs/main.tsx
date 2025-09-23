@@ -1,8 +1,7 @@
 import addIcon from "../../assets/icons/mapmarker.svg"
 import phonesIcon from "../../assets/icons/phonecall.svg"
 import emailIcon from "../../assets/icons/envelope.svg"
-import HqImg from "/lg/hq.png"
-import Unit1 from "/lg/hatsady-unit.png"
+
 function Contactus() {
     return (
         <div className="pt-16">
