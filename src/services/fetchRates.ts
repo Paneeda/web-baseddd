@@ -30,7 +30,7 @@ const fetchExchangeRateByRange = async (from_date: string, to_date: string) => {
 
 const fetchInterestRate = async () => {
     try {
-        const response = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/api/interest-rate`, {
+        const response = await axios.get(`${import.meta.env.VITE_API_ENDPOINT}/api/interests`, {
             headers: {
                 'Content-Type': 'application/json',
             }

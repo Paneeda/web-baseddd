@@ -20,7 +20,7 @@ const Forms: React.FC = () => {
 
             <div className="rounded-lg shadow mb-10">
                 <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl">Application Forms</h3>
-                <div className="p-10 grid grid-cols-3">
+                <div className="p-10 grid grid-cols-1 lg:grid-cols-3">
                     {/*item*/}
                     <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
                         <div className="flex items-center mb-4 p-2">
@@ -96,7 +96,7 @@ const Forms: React.FC = () => {
 
             <div className="rounded-lg shadow mb-10">
                 <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl ">Internet Banking Forms</h3>
-                <div className="p-10 grid grid-cols-3 ">
+                <div className="p-10 grid grid-cols-1 lg:grid-cols-3 ">
                     {/*item*/}
                     <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
                         <div className="flex items-center mb-4 p-2">
@@ -243,7 +243,7 @@ const Forms: React.FC = () => {
             <div className="rounded-lg shadow mb-10">
                 <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl">Fee & Charges</h3>
 
-                <div className="p-10 grid grid-cols-3">
+                <div className="p-10 grid grid-cols-1 lg:grid-cols-3">
                     {/*item*/}
                     <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
                         <div className="flex items-center mb-4 p-2">
@@ -267,7 +267,7 @@ const Forms: React.FC = () => {
 
             <div className="rounded-lg shadow mb-10">
                 <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl">Discrepancy Forms</h3>
-                <div className="p-10 grid grid-cols-3">
+                <div className="p-10 grid grid-cols1 lg:grid-cols-3">
                     {/*item*/}
                     <div className="relative my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
                         <div className="flex items-center mb-4 p-2">

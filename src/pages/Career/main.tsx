@@ -6,28 +6,28 @@ const Career: React.FC = () => {
 
     return (
         <div className="pt-17">
-            <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy">Careers</h2>
+            <h2 className="text-2xl md:text-3xl my-10 border-l-100  border-bic-navy">Careers</h2>
             <div className="flex flex-row ">
-                <h3 className="p-5 pt-9 font-medium text-2xl ">Job Appliacation Form:</h3>
-                <div className="p-5 grid grid-cols-3">
+                <h3 className="p-5 pt-7 font-medium text-xl lg:text-2xl ">Job Appliacation Form:</h3>
+                <div className=" grid pl-3  grid-cols-3">
                     {/*item*/}
-                    <div className="my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96">
+                    <div className="lg:my-6 my-2 bg-white shadow-sm border border-slate-200 rounded-lg lg:w-90 w-75">
                         <div className="flex items-center mb-4 p-2">
                             <img src={fileicon} alt="" className="h-6 w-6 text-slate-600" />
 
-                            <h5 className="ml-3  text-slate-800 text-xl font-semibold" >
+                            <h5 className="ml-3 text-slate-800 text-xl font-semibold" >
                                 Job Application Form
                             </h5>
                             <a href="https://biclaos.com/wp-content/uploads/2024/06/Job-Application-Form.pdf" target="_blank">
                                 <img src={DownloadIcon} alt="" className="ml-4 h-4 w-4 " /></a>
                         </div>
-                        <p className="text-gray-500 p-2">2024</p>
+                        <p className="text-gray-500 ">2024</p>
                     </div>
                 </div>
             </div>
 
             <div className="relative overflow-x-auto">
-                <table className="w-full text-sm text-left rtl:text-right text-gray-500 ">
+                <table className=" lg:w-full text-sm text-left rtl:text-right text-gray-500 ">
                     <thead className="text-xs text-white bg-bic-navy ">
                         <tr>
                             <th scope="col" className="px-6 py-3">

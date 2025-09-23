@@ -88,26 +88,26 @@ function ExchangeRate() {
   };
 
   return (
-    <div className="w-full justify-center">
+    <div className="">
 
-      <div className="justify-center">
-        <table className="">
+      <div className=" p-1 justify-center ">
+        <table className="w-full">
           <tbody>
             <tr className="text-bic-navy border-b border-gray-300">
               {/* <td className="px-6 py-4 text-left font-medium">{t("Country")}</td> */}
-              <td className="px-6 py-4 text-left font-medium">{t("Currency")}</td>
-              <td className="px-6 py-4 text-left font-medium">{t("Buy")}</td>
-              <td className="px-6 py-4 text-left font-medium">{t("Sell")}</td>
+              <td className=" py-4   font-medium">{t("Currency")}</td>
+              <td className=" py-4 font-medium">{t("Buy")}</td>
+              <td className=" py-4  font-medium">{t("Sell")}</td>
             </tr>
             {exchangeRate.rates.map((rate) => (
-              <tr key={rate.fx_type} className="border-b border-gray-300 hover:bg-gray-100">
+              <tr key={rate.fx_type} className="border-b border-gray-300  hover:bg-gray-100">
                 {/* <td className="px-6 py-4 text-left">{formatFlag(rate.fx_type)}</td> */}
-                <td className="flex p-4 items-center">
-                  <span className="px-2">{formatFlag(rate.fx_type)}</span>
+                <td className="flex  items-center">
+                  <span className=" p-1 lg:w-10 ">{formatFlag(rate.fx_type)}</span>
                   <span className="px-2">{formatCurrency(rate.fx_type)}</span>
                 </td>
-                <td className="px-6 py-4 text-left text-bic-navy">{formatThousand(rate.sbprice)}</td>
-                <td className="px-6 py-4 text-left text-bic-red">{formatThousand(rate.ssprice)}</td>
+                <td className="px-6 py-4 text-bic-navy">{formatThousand(rate.sbprice)}</td>
+                <td className="px-6 py-4  text-bic-red">{formatThousand(rate.ssprice)}</td>
               </tr>
             ))}
           </tbody>
@@ -134,7 +134,7 @@ function ExchangeRate() {
               <select
                 value={fromCurrency}
                 onChange={(e) => handleFromChange(e.target.value)}
-                className="absolute  right-2 p-2   rounded "
+                className="absolute  right-2 p-2   "
               >
                 {exchangeRate.rates.map((cur) => (
                   <option key={cur.fx_type} value={formatCurrency(cur.fx_type)}>

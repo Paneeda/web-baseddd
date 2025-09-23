@@ -3,7 +3,7 @@ function Atm () {
         <div className=" pt-19 pl-4 lg:px-110 " >
          
             <div className=" max-w-sm  ">
-            <table className=" bg-white text-center shadow-md rounded-lg border border-gray-200  ">
+            <table className=" bg-white text-center shadow-md rounded-lg border border-gray-200 mb-10 ">
                 <thead>
                     <tr className="border-b h-10 ">
                         <th className="text-gray-600 font-medium text-sm w-6 p-3">No</th>

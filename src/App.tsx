@@ -56,7 +56,7 @@ function App() {
         </main>
 
         {/* Footer */}
-    <div className="pt-30">
+    <div className="t-30">
       <Footer/>
     </div>
 
