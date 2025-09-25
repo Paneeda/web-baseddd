@@ -1,4 +1,4 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'; //1
 import { useState } from 'react';
 import BICLogo1 from '/lg/bic_logo_w_1.svg';
 import BICLogo2 from '/lg/bic_logo_w_2.svg';
@@ -8,12 +8,12 @@ import Midmenu from '../midmenubar/main';
 import { formatFlag } from '../../utils/formatter';
 
 const Header: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(); //2 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isProductOpenMobile, setIsProductOpenMobile] = useState(false);
 
-  const changeLanguage = (lng: string) => {
+  const changeLanguage = (lng: string) => { //3
     i18n.changeLanguage(lng);
     try {
       // Ensure persistence across reloads/navigation
@@ -82,9 +82,10 @@ const Header: React.FC = () => {
               </div>
             </div>
 
-            <div className='flex flex-row  gap-3 items-center ml-85 max-sm:hidden'>
+            <div className='flex flex-row   gap-3 items-center ml-70 max-sm:hidden'>
                       <div className="">
-                  <a href="/contactus" className=" rounded-md text-sm font-medium text-gray-800 hover:text-bic-light">{t('ContactUs')}</a>
+                  <a href="/contactus" className=" px-3 py-2  rounded-md text-sm
+                   font-medium hover:bg-bic-navy hover:text-bic-red focus:outline-none focus:text-red focus:bg-bic-navy-dark transition ">{t('ContactUs')}</a>
                 </div>
 
                 {/* Desktop searchbar */}

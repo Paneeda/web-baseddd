@@ -16,30 +16,30 @@ function Ibanking () {
                 </section>
                          <h2 className="text-2xl my-10 border-l-100  border-bic-navy">I-Banking</h2>
 
-                <section className="flex flex-row p-5 gap-10 ">
+                <section className="lg:flex lg:flex-row p-5 gap-10  ">
                     <div className="columns-1">
                         <h3 className="font-bold"> Product Objective</h3>
-                        <p>The Internet Banking Service is a tool to facilitate customers to access their
+                        <p className="text-justify">The Internet Banking Service is a tool to facilitate customers to access their
                          bank accounts and manage their money online from different locations in anytime that they want.</p>
                          <h3 className="font-bold">Benefit for User</h3>
-                         <ul>
+                         <ul className="list-disc text-justify ml-5">
                             <li> Can perform financial transaction within BIC Accounts faster as it can be accessed anywhere and anytime.</li>
                             <li> The customer can make amendment on their transaction as they are allowed to have Admin User as well.</li>
                             <li> Customers can set auto process transaction (recurrence) or set payment transaction in advance.</li>
                             <li>The business customer can process payroll transactions for staff by their own without paying any fees to the bank.</li>
                             <li> Easy to monitor usage of transactions or review bank statement.</li>
                          </ul>
-                         <h3 className="font-bold">Specific Conditions:</h3>
-                         <ul> 
-                            <li>The user must have current account with BIC Bank.</li>
-                            <li>Only an account holder or a person, who has been entitled by an account holder, can register for the service.</li>
-                            <li>Before using the services, the user should accept terms and conditions and also complete the application form with reliable information.</li>
-                            <li>A power of attorney letter is required, if an account holder cannot register/apply by himself/herself while valid ID cards 
+                         <h3 className="font-bold ">Specific Conditions:</h3>
+                         <ul className="text-justify ml-5"> 
+                            <li className="list-disc">The user must have current account with BIC Bank.</li>
+                            <li className="list-disc">Only an account holder or a person, who has been entitled by an account holder, can register for the service.</li>
+                            <li className="list-disc">Before using the services, the user should accept terms and conditions and also complete the application form with reliable information.</li>
+                            <li className="list-disc">A power of attorney letter is required, if an account holder cannot register/apply by himself/herself while valid ID cards 
                                 must be provided by both an account holder and his/her representative</li>
                          </ul>
                     </div>
                    
-                    <div className="max-w-sm columns-1  " >
+                    <div className="max-w-sm columns-1 ml-9 mt-4 " >
                             <img src={Imgsec} alt="" />
                             <img src={Imgsec} className="pt-3" alt="" />
                       
@@ -50,7 +50,7 @@ function Ibanking () {
                 <div>
                
                   {/*items */}
-                  <div className="p-10  grid grid-cols-3">
+                  <div className="p-10 ml-3  grid grid-cols-1 lg:grid-cols-3">
                      <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
             
         <div className="flex items-center mb-4 p-2">

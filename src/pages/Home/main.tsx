@@ -38,12 +38,12 @@ const Home: React.FC = () => {
             <h2 className="text-2xl  text-start my-10 border-l-100 border-bic-navy ">{t('Product&Service')}</h2>
 
 
-            <div className="grid grid-cols-1 lg:grid-cols-4  gap-5 ">
+            <div className="grid grid-cols-1 lg:grid-cols-4 justify-items-center gap-5 ">
 
                 {/*product and service section */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 lg:col-span-3 pl-2">
                     {/*Items */}
-                    <div className="max-w-2xs max-h-fit bg-white border border-gray-200 rounded-lg shadow-xs">
+                    <div className="max-w-2xs max-h-fit bg-white border border-gray-200  rounded-lg shadow-xs">
                         <a href="#">
                             <img className="rounded-t-lg" src={NewsImg2} alt="" />
                         </a>
@@ -116,7 +116,7 @@ const Home: React.FC = () => {
 
                 </div>
 
-                <div className=''>
+                <div className='w-full'>
                     <Rates />
 
                 </div>

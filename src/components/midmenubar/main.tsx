@@ -13,7 +13,7 @@ function Midmenu() {
           <li>
             <a
               href="/deposit"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1 border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('Deposit')}
             </a>
@@ -21,7 +21,7 @@ function Midmenu() {
           <li>
             <a
               href="/loan"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('Loans')}
             </a>
@@ -29,7 +29,7 @@ function Midmenu() {
           <li>
             <a
               href="/atm"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('ATMLocation')}
             </a>
@@ -37,7 +37,7 @@ function Midmenu() {
           <li>
             <a
               href="/remittance"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('Remittance')}
             </a>
@@ -45,7 +45,7 @@ function Midmenu() {
           <li>
             <a
               href="/feencharge"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('Fee&Charge')}
             </a>
@@ -53,7 +53,7 @@ function Midmenu() {
           <li>
             <a
               href="/forms"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('Forms')}
             </a>
@@ -61,7 +61,7 @@ function Midmenu() {
           <li>
             <a
               href="/career"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('Career')}
             </a>
@@ -69,7 +69,7 @@ function Midmenu() {
           <li>
             <a
               href="/serviceunit"
-              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               {t('ServiceUnits')}
             </a>
@@ -80,7 +80,7 @@ function Midmenu() {
           <li>
             <a
               href="/ibanking"
-              className="px-2 py-1 rounded-md text-white/90 border-b-2 border-transparent hover:text-white hover:border-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  text-white/90 border-b-2 border-transparent hover:text-white hover:border-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               iBanking
             </a>
@@ -88,7 +88,7 @@ function Midmenu() {
           <li>
             <a
               href="/bic-care"
-              className="px-2 py-1 rounded-md text-white/90 border-b-2 border-transparent hover:text-white hover:border-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+              className="px-2 py-1  text-white/90 border-b-2 border-transparent hover:text-white hover:border-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
               BIC Care
             </a>

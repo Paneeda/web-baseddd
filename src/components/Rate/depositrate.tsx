@@ -23,7 +23,7 @@ function DepositRate() {
     const loadRates = async () => {
       try {
         const data = await fetchInterestRate();
-        setInterestRates(data);
+        setInterestRates(data.data);
       } catch {
         setError("Failed to fetch deposit rates");
       } finally {
@@ -40,8 +40,8 @@ function DepositRate() {
 
   return (
 
-  <div className="p-5">
-      <table className="w-full">
+  <div className="">
+      <table className="w-full ">
         <tbody>
           <tr className="text-bic-navy border-b border-gray-300 uppercase">
             <td className="text-xs text-left font-medium">Account Type</td>
@@ -55,13 +55,13 @@ function DepositRate() {
               <td className="text-xs text-left font-medium px-2 py-4">
                 {rate.interest_type}
               </td>
-              <td className="text-xs text-center px-6 py-4 font-medium">
+              <td className="text-xs text-center lg:px-2 px-6 py-4 font-medium">
                 {rate.lak_ccy}%
               </td>
-              <td className="text-xs text-center px-6 py-4 font-medium">
+              <td className="text-xs text-center lg:px-2  px-6 py-4 font-medium">
                 {rate.usd_ccy}%
               </td>
-              <td className="text-xs text-center px-6 py-4 font-medium">
+              <td className="text-xs text-center lg:px-2 px-6 py-4 font-medium">
                 {rate.thb_ccy}%
               </td>
             </tr>
