@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Lao:wght@100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+
+  --font-bic: "Noto Sans Lao", "sans-serif";
+  /* --font-la: "Noto Sans Lao", "sans-serif"; */
+  /* --font-en: "Arial", "Helvetica", "sans-serif"; */
+
+  --color-bic-bg: #F5F5F5;
+  --color-bic-navy: #1C2D59;
+  --color-bic-navy-light: #2A3D70;
+  --color-bic-navy-dark: #0F1D40;
+  --color-bic-red: #E03C31;
+  --color-bic-red-light: #E85A51;
+  --color-bic-red-dark: #C22A20;
+  --color-bic-gold: #FFB800;
+  --color-bic-gold-light: #FFD233;
+  --color-bic-gray: #6E6E6E;
+}
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}
+
+.animated-gradient-border {
+  /* Border setup */
+  border: 1px solid;
+  border-radius: 10px;
+  /* padding: 0.25rem; */
+  --border-angle: 0deg;
+  /* initial angle */
+  border-color: transparent;
+  /* Tunables */
+  --ring-dim: transparent;
+  /* dim color around the ring */
+  --ring-highlight: var(--color-bic-gold);
+  /* main glow color */
+  --ring-highlight-soft: var(--color-bic-gold-light);
+  /* soft glow shoulders */
+  --ring-speed: 3s;
+  /* animation period */
+
+  /* Fill + dim ring + narrow glow wedge (transparent elsewhere) */
+  background:
+    /* 1) Content fill */
+    /* bg-gradient-to-r from-gray-100 to-bic-navy-dark text-white shadow  */
+    linear-gradient(var(--animated-fill, var(--color-bic-navy)), var(--animated-fill, var(--color-bic-navy-light))),
+    /* 2) Dim base ring */
+    conic-gradient(from var(--border-angle),
+      var(--ring-dim) 0%,
+      var(--ring-dim) 30%) border-box,
+    /* 3) Moving glow wedge */
+    conic-gradient(from var(--border-angle),
+      transparent 0%,
+      transparent 30%,
+      var(--ring-highlight-soft) 47%,
+      var(--ring-highlight) 50%,
+      var(--ring-highlight-soft) 80%,
+      transparent 56%,
+      transparent 100%) border-box;
+  background-clip: padding-box, border-box, border-box;
+  animation: animated-border-rotate var(--ring-speed) linear infinite;
+}
+
+@keyframes animated-border-rotate {
+  to {
+    --border-angle: 360deg;
+  }
+}

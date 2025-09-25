@@ -9,9 +9,57 @@
 
   --color-bic-bg: #F5F5F5;
   --color-bic-navy: #1C2D59;
-  --color-bic-navy-light: #2A3D70;
+  --color-bic-navy-light: #384f8e;
   --color-bic-navy-dark: #0F1D40;
   --color-bic-red: #E03C31;
   --color-bic-red-light: #E85A51;
   --color-bic-red-dark: #C22A20;
+  --color-bic-gold: #FFB800;
+  --color-bic-gold-light: #FFD233;
+  --color-bic-gray: #6E6E6E;
+}
+
+.animated-gradient-border {
+  /* position: relative; */
+  border: 0px solid var(--color-bic-navy-dark);
+  border-radius: 10px;
+  background: linear-gradient(var(--color-bic-navy), var(--color-bic-navy-light));
+  overflow: hidden;
+  
+}
+
+/* แสงสแกนวิ่งผ่าน */
+.animated-gradient-border::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255,184,0,0) 40%,
+      rgba(115, 115, 115, 0.55) 50%,
+      rgba(255,184,0,0) 60%,
+      transparent 100%
+    );
+  transform: translateX(-150%);
+  animation: nav-scan 6s cubic-bezier(.2,.02,.2,.5) infinite;
+  mix-blend-mode: screen; /* ถ้าอยากให้ soft glow */
+  pointer-events: none;
+}
+
+/* ถ้าต้องการให้สแกนแค่ครั้งเดียว ใส่คลาสเพิ่มเติม flash-once */
+.animated-gradient-border.flash-once::after {
+  animation-iteration-count: 1;
+}
+
+/* ความเร็วปรับด้วย --scan-speed */
+.animated-gradient-border[data-scan-speed]::after {
+  animation-duration: attr(data-scan-speed time, 2.2s);
+}
+
+@keyframes nav-scan {
+  to {
+    transform: translateX(100%);
+  }
 }

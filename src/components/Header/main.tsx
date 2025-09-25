@@ -1,10 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
-import BICLogo1 from '/lg/bic_1_1.png';
-import BICLogo2 from '/lg/bic_1_2.png';
+import BICLogo1 from '/lg/bic_logo_w_1.svg';
+import BICLogo2 from '/lg/bic_logo_w_2.svg';
 import MenuIcon from '../../assets/icons/hamburger.svg';
 import CloseIcon from '../../assets/icons/closex.svg';
 import Midmenu from '../midmenubar/main';
+import { formatFlag } from '../../utils/formatter';
 
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -39,10 +40,10 @@ const Header: React.FC = () => {
 
   // Language configuration
   const languages = [
-    { code: 'en', name: 'English', flag: '🇺🇸' },
-    { code: 'la', name: 'ລາວ', flag: '🇱🇦' },
-    { code: 'cn', name: '中文', flag: '🇨🇳' },
-    { code: 'vn', name: 'Tiếng Việt', flag: '🇻🇳' }
+    { code: 'en', name: 'English', flag: 'USD' },
+    { code: 'la', name: 'ລາວ', flag: 'LAK' },
+    { code: 'cn', name: '中文', flag: 'CNY' },
+    { code: 'vn', name: 'Tiếng Việt', flag: 'VND' }
   ];
 
   const getCurrentLanguageInfo = () => {
@@ -50,38 +51,35 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="relative z-20 bg-white shadow ">
+    <header className="relative z-20 bg-gradient-to-b from-bic-navy-dark to-bic-navy-light text-white">
       <nav className="w-full mx-auto px-3 sm:px-4 lg:px-8  ">
         <div className="flex items-center justify-between h-16 ">
           <div className="flex items-center">
-            <a className="flex-shrink-0" href="/" aria-label="BIC Home">
-              <img className="block lg:hidden h-10 w-auto" src={BICLogo2} alt="BIC Logo" />
-              <img className="hidden lg:block h-12 w-auto" src={BICLogo1} alt="BIC Logo" />
+            <div>
+              <a className="flex-shrink-0" href="/" aria-label="BIC Home">
+              <img className="block lg:hidden h-10 w-auto" src={BICLogo1} alt="BIC Logo" />
+              <img className="hidden lg:block h-12 w-auto" src={BICLogo2} alt="BIC Logo" />
             </a>
 
+            </div>
             {/* Desktop Navigation */}
             <div className="hidden lg:block lg:ml-4">
               <div className="flex items-center ">
                 <div className="relative">
-                  <a href="/" className="px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('Home')}</a>
+                  <a href="/" className="px-3 py-2  rounded-md text-sm
+                   font-medium hover:bg-bic-navy hover:text-bic-red focus:outline-none focus:text-red focus:bg-bic-navy-dark transition">{t('Home')}</a>
                 </div>
 
                 <div className="relative">
-                  <a href="/aboutus" className=" px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('Aboutus')}</a>
+                  <a href="/aboutus" className="px-3 py-2  rounded-md text-sm
+                   font-medium hover:bg-bic-navy hover:text-bic-red focus:outline-none focus:text-red focus:bg-bic-navy-dark transition">{t('Aboutus')}</a>
                 </div>
 
                 <div className="relative">
-                  <a href="/news" className=" px-3 py-2  rounded-md text-sm
-                   font-medium text-gray-800 hover:bg-bic-navy hover:text-white focus:outline-none focus:text-white focus:bg-bic-navy-dark transition">{t('News')}</a>
+                  <a href="/news" className="px-3 py-2  rounded-md text-sm
+                   font-medium hover:bg-bic-navy hover:text-bic-red focus:outline-none focus:text-red focus:bg-bic-navy-dark transition">{t('News')}</a>
                 </div>
-         
-
               </div>
-
-
-
-              
-
             </div>
 
             <div className='flex flex-row  gap-3 items-center ml-85 max-sm:hidden'>
@@ -116,9 +114,9 @@ const Header: React.FC = () => {
                 onClick={toggleDropdown}
                 aria-haspopup="listbox"
                 aria-expanded={isDropdownOpen}
-                className="flex items-center px-3 py-2 rounded-md text-sm font-medium text-gray-800 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-bic-navy transition"
+                className="flex items-center px-3 py-2 rounded-md text-sm font-medium  focus:outline-none focus:ring-2 focus:ring-bic-red transition hover:bg-bic-bg hover:text-bic-navy-dark"
               >
-                <span className="mr-2">{getCurrentLanguageInfo().flag}</span>
+                <span className="mr-2">{formatFlag(getCurrentLanguageInfo().flag)}</span>
                 <span className="hidden sm:inline mr-1">{getCurrentLanguageInfo().name}</span>
                 <svg
                   className={`w-4 h-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`}
@@ -138,7 +136,7 @@ const Header: React.FC = () => {
                       onClick={() => changeLanguage(language.code)}
                       className={`flex items-center w-full px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition ${currentLanguage === language.code ? 'bg-blue-50 text-blue-700' : ''}`}
                     >
-                      <span className="mr-3">{language.flag}</span>
+                      <span className="mr-3">{formatFlag(language.flag)}</span>
                       <span>{language.name}</span>
                       {currentLanguage === language.code && (
                         <svg className="w-4 h-4 ml-auto text-blue-600" fill="currentColor" viewBox="0 0 20 20">
@@ -223,7 +221,7 @@ const Header: React.FC = () => {
                       onClick={() => changeLanguage(language.code)}
                       className={`px-3 py-1 rounded-full text-sm border ${currentLanguage === language.code ? 'bg-bic-navy text-white border-bic-navy' : 'border-gray-300 text-gray-700 hover:bg-gray-100'}`}
                     >
-                      <span className="mr-1">{language.flag}</span>
+                      <span className="mr-1">{formatFlag(language.flag)}</span>
                       <span>{language.code.toUpperCase()}</span>
                     </button>
                   ))}

@@ -1,35 +1,102 @@
-
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'; // ...existing code...
 
 function Midmenu() {
-    const { t } = useTranslation();
+  const { t } = useTranslation(); // ...existing code...
 
-    return (
-        <div className="justify-items-center p-2">
+  return (
+    <div className="justify-items-center p-2 bg-gradient-to-b from-bic-red to-bic-navy shadow-md">
+      <nav
+        aria-label="Primary"
+        className="absolute max-md:hidden rounded-md border animated-gradient-border"
+      >
+        <ul className="flex items-center gap-x-6 px-4 py-2 text-md font-bic font-semibold text-white">
+          <li>
+            <a
+              href="/deposit"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('Deposit')}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/loan"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('Loans')}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/atm"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('ATMLocation')}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/remittance"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('Remittance')}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/feencharge"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('Fee&Charge')}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/forms"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('Forms')}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/career"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('Career')}
+            </a>
+          </li>
+          <li>
+            <a
+              href="/serviceunit"
+              className="px-2 py-1 rounded-md border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              {t('ServiceUnits')}
+            </a>
+          </li>
 
-            <div className="flex flex-row justify-between bg-white absolute rounded-sm p-1 border border-gray-300 mt-4 w-6xl max-sm:hidden">
-                <a href="/deposit" className="px-2 py-2 ml-10 text-bic-navy hover:border-b-3 border-bic-navy">{t('Deposit')}</a>
-                <a href="/loan" className="px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy">{t('Loans')}</a>
-                <a href="/atm" className="px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy">{t('ATMLocation')}</a>
-                <a href="/remittance" className="px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy">{t('Remittance')}</a>
-                <a href="/feencharge" className="px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy">{t('Fee&Charge')}</a>
-                   <a href="/forms" className="px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy">{t('Forms')}</a>
-                  <a href="/career" className=" px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy">{t('Career')}</a>
-           <a href="/serviceunit" className=" px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy">{t('ServiceUnits')}</a>
-                <div className="border-l-2 border-slate-200"></div>
-                <a href="/ibanking" className='px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy' >I-Banking</a>
-                <a href="/bic-care" className='px-2 py-2  text-bic-navy hover:border-b-3 border-bic-navy mr-10'>BIC Care</a>
-            </div>
+          <li aria-hidden="true" className="mx-2 h-6 w-px bg-slate-200/60" />
 
-
-
-
-
-
-        </div>
-    );
+          <li>
+            <a
+              href="/ibanking"
+              className="px-2 py-1 rounded-md text-white/90 border-b-2 border-transparent hover:text-white hover:border-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              iBanking
+            </a>
+          </li>
+          <li>
+            <a
+              href="/bic-care"
+              className="px-2 py-1 rounded-md text-white/90 border-b-2 border-transparent hover:text-white hover:border-white/70 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
+            >
+              BIC Care
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
 }
 
-
-
-export default Midmenu
+export default Midmenu; // ...existing code...
