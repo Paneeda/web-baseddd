@@ -129,7 +129,7 @@ const Home: React.FC = () => {
             <h2 className="text-2xl  text-start my-10 border-l-100  border-bic-navy ">{t('Event&Annoucement')}</h2>
 
 
-            <div className='lg:col-span-1'>
+            <div className='lg:col-span-1 justify-items-center'>
 
                 <CardList />
 

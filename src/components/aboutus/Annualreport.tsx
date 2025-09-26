@@ -1,17 +1,21 @@
 import DownloadIcon from "../../assets/icons/download.svg"
 import fileicon from "/lg/file-icon.png"
+import { useTranslation } from 'react-i18next'; 
 function AnnualReport() {
+    const { t, i18n } = useTranslation(); 
+  
+
     return (
         <div>
 
-            <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">Annual Reports</h1>
+            <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">{t('AnnualReport')}</h1>
 
             <div className="p-5">
 
                 <div className="p-3">
 
                     <div className="bg-white  h-60 shadow-md rounded-xl border-gray-200  ">
-                        <h1 className="text-white text-center text-xl p-4 h-15 font-semibold  bg-bic-navy rounded-t-lg">Annual Reports</h1>
+                        <h1 className="text-white text-center text-xl p-4 h-15 font-semibold  bg-bic-navy rounded-t-lg">{t('AnnualReport')}</h1>
 
 
                         <div className="p-2 flex flex-row gap-5">
@@ -107,7 +111,7 @@ function AnnualReport() {
                 <div className="p-3">
 
                     <div className="bg-white  h-60 shadow-md rounded-xl border-gray-200  ">
-                        <h1 className="text-white text-center text-xl p-4 h-15 font-semibold  bg-bic-navy rounded-t-lg">Audited Reports</h1>
+                        <h1 className="text-white text-center text-xl p-4 h-15 font-semibold  bg-bic-navy rounded-t-lg">{t('AuditReport')}</h1>
 
                         <div className="p-2 flex gap-5">
                             {/*item2 */}

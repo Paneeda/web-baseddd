@@ -4,6 +4,7 @@ import phonesIcon from "../../assets/icons/phonecall.svg"
 import emailIcon from "../../assets/icons/envelope.svg"
 import HqImg from "/lg/hq.png"
 import Unit1 from "/lg/hatsady-unit.png"
+import { t } from "i18next"
 function ServiceUnits () {
     return (
         <div className="pt-16">
@@ -12,14 +13,14 @@ function ServiceUnits () {
 
 
 
-               <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy  dark:text-gray-200">Coporate Office, Branches and Service Units </h2>
+               <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy  dark:text-gray-200">{t('ServiceUnitss')} </h2>
 
 
 
 
 
             {/*branche 1*/}
-            <div className="grid grid-cols-3 p-3 pl-5 gap-5 justify-center items-center bg-white min-h-screen">
+            <div className="grid grid-cols-1 justify-items-center lg:grid-cols-3 p-3 pl-5 gap-5 justify-center items-center bg-white min-h-screen">
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden max-w-lg w-full ">
                     <img src={HqImg} alt="Mountain" className="w-full h-full object-cover" />
                     <div className="p-6">

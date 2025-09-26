@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isProductOpenMobile, setIsProductOpenMobile] = useState(false);
 
-  const changeLanguage = (lng: string) => { //3
+  const changeLanguage = (lng: string) => { 
     i18n.changeLanguage(lng);
     try {
       // Ensure persistence across reloads/navigation
@@ -46,7 +46,7 @@ const Header: React.FC = () => {
     { code: 'vn', name: 'Tiếng Việt', flag: 'VND' }
   ];
 
-  const getCurrentLanguageInfo = () => {
+  const getCurrentLanguageInfo = () => {  //3
     return languages.find(lang => lang.code === currentLanguage) || languages[0];
   };
 

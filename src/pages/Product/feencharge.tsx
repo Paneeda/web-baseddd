@@ -1,10 +1,12 @@
+import { useTranslation } from 'react-i18next';
 import DownloadIcon from "../../assets/icons/download.svg"
 import fileicon from "/lg/file-icon.png"
 
 function FeeandCharge() {
+      const { t } = useTranslation();
     return (
         <div className="pt-15">
-            <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy  dark:text-gray-200">Fee & Charges</h2>
+            <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy  dark:text-gray-200">{t('FeeAndCharge')}</h2>
 
             <div className="p-5 grid grid-cols-1 lg:grid-cols-3 rounded-lg shadow">
                 {/*item*/}

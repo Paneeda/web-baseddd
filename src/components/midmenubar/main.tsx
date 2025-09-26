@@ -47,7 +47,7 @@ function Midmenu() {
               href="/feencharge"
               className="px-2 py-1  border-b-2 border-transparent hover:border-white/80 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/70"
             >
-              {t('Fee&Charge')}
+              {t('FeeAndCharge')}
             </a>
           </li>
           <li>

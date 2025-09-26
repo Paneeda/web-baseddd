@@ -16,6 +16,7 @@
     "Other": "ອື່ນໆ",
     "ElectronicBanking": "ບໍລິການອີເລັກໂທຣນິກ",
     "ServiceUnits": "ໜ່ວຍບໍລິການ",
+    "ServiceUnitss": "ສໍານັກງານໃຫຍ່, ສາຂາ ແລະ ໜ່ວຍບໍລິການ",
     
 
     "OnlineForms": "ແບບຟອມອອນລາຍ",
@@ -55,6 +56,26 @@
     "Country": "ປະເທດ",
     "Currency": "ສະກຸນເງິນ",
     "Buy": "ອັດຕາຊື້",
-    "Sell": "ອັດຕາຂາຍ"
+    "Sell": "ອັດຕາຂາຍ",
+
+
+
+    "AnnualReport": "ລາຍງານປະຈຳປີ",
+    "AuditReport": "ລາຍງານການເງິນ",
+    "BoardOfDirector": "ສະພາບໍລິຫານ",
+    "ExecutiveTeam": "ຄະນະຜູ້ບໍລິຫານ",
+    "Vision": "ວິໄສທັດ",
+    "Mission": "ພາລະກິດ",
+    "coreValue": "ຄ່ານິຍົມ",
+    "businessOriented": "ການດໍາເນີນທຸລະກິດ",
+    "CultureExcellence": "ວັດທະນະທຳທີ່ດີເລີດ",
+    "Collaboration": "ການຮ່ວມມື",
+    "Agility": "ຄວາມຄ່ອງແຄ້ວ",
+    "Respect": "ຄວາມເຄົາລົບ",
+    "Ethics": "ຈັນຍາບັນ",
+    "Interactions": "ການຮ່ວມມື",
+    "FeeAndCharge": "ຄ່າທຳນຽມ"
+
+
 
 }

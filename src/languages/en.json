@@ -14,8 +14,8 @@
     "Deposit": "Deposit",
     "Remittance": "Remittance",
     "Other": "Other",
-    "Fee&Charge": "Fee & Charges",
-    "ServiceUnits": "Service Units",
+    "ServiceUnits":"Service Units",
+    "ServiceUnitss":"Corporate Office, Branches and Service Units",
 
     "OnlineForms": "Online Forms",
     "ElectronicBanking": "Electronic Banking",
@@ -55,5 +55,21 @@
     "Country": "Country",
     "Currency": "Currency",
     "Buy": "Buy",
-    "Sell": "Sell"
+    "Sell": "Sell",
+
+    "AnnualReport": "Annual Reports",
+    "AuditReport": "Audited Reports",
+    "BoardOfDirector": "Board of Directors",
+    "ExecutiveTeam": "Executive and Management Committee",
+    "Vision": "Our Vision",
+    "Mission": "Our Mission",
+    "coreValue": "BIC Core Values – BIC Care",
+    "businessOriented": "Business Oriented",
+    "CultureExcellence": "Culture Excellence",
+    "Collaboration": "Collaboration",
+    "Agility": "Agility",
+    "Respect": "Respect",
+    "Ethics": "Ethics",
+    "Interactions": "Interactions",
+    "FeeAndCharge": "Fee & Charges"
 }

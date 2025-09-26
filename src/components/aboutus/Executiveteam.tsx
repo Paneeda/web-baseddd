@@ -1,11 +1,12 @@
 import Logo from "/lg/bic_1_2.png"
-
+import { useTranslation } from 'react-i18next'; 
 
 function Executiveteam() {
+        const { t, i18n } = useTranslation(); 
     return (
         <div>
 
-            <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">Board of Directors</h1>
+            <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">{t('BoardOfDirector')}</h1>
 
             <section className=" py-10 ">
                 <div className="px-10 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-20">
@@ -42,7 +43,7 @@ function Executiveteam() {
 
             </section>
 
-            <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">Executive and Management Committee</h1>
+            <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">{t('ExecutiveTeam')}</h1>
 
             <section className=" py-10">
                 <div className="px-10 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-20">
