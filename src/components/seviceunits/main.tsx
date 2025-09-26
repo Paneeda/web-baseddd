@@ -13,7 +13,7 @@ function ServiceUnits () {
 
 
 
-               <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy  dark:text-gray-200">{t('ServiceUnitss')} </h2>
+               <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy text-start dark:text-gray-200">{t('ServiceUnitss')} </h2>
 
 
 

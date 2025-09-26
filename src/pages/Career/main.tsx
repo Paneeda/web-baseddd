@@ -1,12 +1,15 @@
+
 import DownloadIcon from "../../assets/icons/download.svg"
 import fileicon from "/lg/file-icon.png"
-
+import { useTranslation } from 'react-i18next';
 
 const Career: React.FC = () => {
-
+ const { t } = useTranslation();
     return (
+        
+
         <div className="pt-17">
-            <h2 className="text-2xl md:text-3xl my-10 border-l-100  border-bic-navy">Careers</h2>
+            <h2 className="text-2xl md:text-3xl my-10 border-l-100 text-start border-bic-navy">{t('Career')}</h2>
             <div className="flex flex-row ">
                 <h3 className="p-5 pt-7 font-medium text-xl lg:text-2xl ">Job Appliacation Form:</h3>
                 <div className=" grid pl-3  grid-cols-3">

@@ -16,6 +16,7 @@ import CardList from "../../components/Card/main"
 const IMAGES = [SlideImg1, SliderImg2, SliderImg3]
 
 const Home: React.FC = () => {
+    
     const { t } = useTranslation();
 
 

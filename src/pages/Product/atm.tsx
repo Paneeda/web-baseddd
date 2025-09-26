@@ -1,6 +1,6 @@
 function Atm () {
     return (
-        <div className=" pt-19 pl-4 lg:px-110 " >
+        <div className=" pt-19 pl-4 justify-items-center   " >
          
             <div className=" max-w-sm  ">
             <table className=" bg-white text-center shadow-md rounded-lg border border-gray-200 mb-10 ">

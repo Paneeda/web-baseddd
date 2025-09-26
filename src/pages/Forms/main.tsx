@@ -1,10 +1,10 @@
-
+import { useTranslation } from 'react-i18next';
 import DownloadIcon from "../../assets/icons/download.svg"
 import fileicon from "/lg/file-icon.png"
 const Forms: React.FC = () => {
 
 
-
+const { t } = useTranslation();
 
 
     return (
@@ -16,7 +16,7 @@ const Forms: React.FC = () => {
 
 
         <div className="pt-15">
-            <h2 className="text-2xl  text-start my-10 border-l-100  border-bic-navy ">Download Resources</h2>
+            <h2 className="text-2xl  text-start my-10 border-l-100  border-bic-navy ">{t('DownloadResources')}</h2>
 
             <div className="rounded-lg shadow mb-10">
                 <h3 className="text-white bg-bic-navy border-t rounded-t-lg h-15 p-2 font-medium text-2xl">Application Forms</h3>

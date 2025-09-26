@@ -10,7 +10,7 @@ function BicCare () {
                     <img src={Ibanner} alt="" />
 
                 </section>
-                         <h2 className="text-2xl md:text-3xl  my-10 border-l-100  border-bic-navy">BIC Care</h2>
+                         <h2 className="text-2xl text-left md:text-3xl  my-10 border-l-100  border-bic-navy">BIC Care</h2>
 
                 <section className="lg:flex lg:flex-row p-5 gap-10 ">
                     <div className="columns-1">

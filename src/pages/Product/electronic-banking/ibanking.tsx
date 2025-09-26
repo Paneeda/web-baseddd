@@ -14,7 +14,7 @@ function Ibanking () {
                     <img src={Ibanner} alt="" />
 
                 </section>
-                         <h2 className="text-2xl my-10 border-l-100  border-bic-navy">I-Banking</h2>
+                         <h2 className="text-2xl my-10 border-l-100 text-start border-bic-navy">I-Banking</h2>
 
                 <section className="lg:flex lg:flex-row p-5 gap-10  ">
                     <div className="columns-1">

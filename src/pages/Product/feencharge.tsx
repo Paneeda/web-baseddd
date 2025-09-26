@@ -6,7 +6,7 @@ function FeeandCharge() {
       const { t } = useTranslation();
     return (
         <div className="pt-15">
-            <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy  dark:text-gray-200">{t('FeeAndCharge')}</h2>
+            <h2 className="text-2xl md:text-3xl pl-2 my-10 border-l-100  border-bic-navy text-start dark:text-gray-200">{t('FeeAndCharge')}</h2>
 
             <div className="p-5 grid grid-cols-1 lg:grid-cols-3 rounded-lg shadow">
                 {/*item*/}
