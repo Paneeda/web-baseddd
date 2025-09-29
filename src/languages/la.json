@@ -73,7 +73,7 @@
     "Agility": "ຄວາມຄ່ອງແຄ້ວ",
     "Respect": "ຄວາມເຄົາລົບ",
     "Ethics": "ຈັນຍາບັນ",
-    "Interactions": "ການຮ່ວມມື",
+    "Interactions": "ການປະຕິສຳພັນ",
     "FeeAndCharge": "ຄ່າທຳນຽມ",
     "DowloadReaources": "ດາວໂຫຼດໄຟລ໌",
 
@@ -88,7 +88,9 @@
      "FullName": "ຊື່ເຕັມ",
      "Subject": "ເລື່ອງ",
     "Message": "ຂໍ້ຄວາມ",
-    "OurLocation": "ທີ່ຕັ້ງຂອງພວກເຮົາ"
+    "OurLocation": "ທີ່ຕັ້ງຂອງພວກເຮົາ",
+    "BankHistory": "ປະຫວັດຄວາມເປັນມາ",
+    "Charts": "ແຜນຜັງອົງກອນ"
 
 
 

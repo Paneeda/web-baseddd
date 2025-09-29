@@ -18,6 +18,7 @@ import FeeandCharge from './pages/Product/feencharge';
 import Ibanking from './pages/Product/electronic-banking/ibanking';
 import BicCare from './pages/Product/electronic-banking/biccare';
 import ServiceUnits from './components/seviceunits/main';
+import ExchangeRate from './components/Rate/exchangerate';
 
 
 
@@ -31,8 +32,8 @@ function App() {
         <div className='sticky top-0 z-50 bg-white shadow'>
           <Header />
         </div>
-        
-   
+
+
 
         {/* Main Content */}
         <main className="flex-1 w-full">
@@ -40,25 +41,36 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/theme" element={<Theme />} />
             <Route path="/aboutus" element={<AboutUs />} />
-            <Route path="/news" element={<News/>} />
-            <Route path='/productnservice' element={<ProductMain/>} />
-            <Route path='/forms' element={<Forms/>} />
-            <Route path='/career' element={<Career/>} />
-            <Route path='/contactus' element={<Contactus/>} />
-            <Route path='/loan' element={<Loans/>} />
-            <Route path='/deposit' element={<Deposit/>}/>
-            <Route path='/atm' element={<Atm/>}/>
-            <Route path='/feencharge' element={<FeeandCharge/>}/>
-            <Route path='/ibanking' element={<Ibanking/>}/>
-            <Route path='/bic-care' element={<BicCare/>}/>
-            <Route path='serviceunit' element={<ServiceUnits/>}/>
+            <Route path="/news" element={<News />} />
+            <Route path='/productnservice' element={<ProductMain />} />
+            <Route path='/forms' element={<Forms />} />
+            <Route path='/career' element={<Career />} />
+            <Route path='/contactus' element={<Contactus />} />
+            <Route path='/loan' element={<Loans />} />
+            <Route path='/deposit' element={<Deposit />} />
+            <Route path='/atm' element={<Atm />} />
+            <Route path='/feencharge' element={<FeeandCharge />} />
+            <Route path='/ibanking' element={<Ibanking />} />
+            <Route path='/bic-care' element={<BicCare />} />
+            <Route path='serviceunit' element={<ServiceUnits />} />
+
           </Routes>
         </main>
 
+        <div className='mt-30'>
+          <Routes>
+            <Route path='/exchangerate' element={<ExchangeRate />} />
+          </Routes>
+        </div>
+
+
+
+
+
         {/* Footer */}
-    <div className="t-30">
-      <Footer/>
-    </div>
+        <div className="t-30">
+          <Footer />
+        </div>
 
 
       </div>

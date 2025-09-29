@@ -83,6 +83,8 @@
     "FullName": "Full Name",
     "Subject": "Subject",
     "Message": "Message",
-    "OurLocation": "Our Location"
+    "OurLocation": "Our Location",
+    "BankHistory": "Bank History",
+    "Charts": "Charts"
 
 }

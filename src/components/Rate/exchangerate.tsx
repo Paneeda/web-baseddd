@@ -147,9 +147,7 @@ function ExchangeRate() {
           
           {/* Rate display for selected ccy */}
 
-          <label htmlFor="rate-display" className="block text-sm font-medium text-gray-700">
-            {t("Exchange Rate")}
-          </label>
+      
 
           {/* To */}
           <div className="w-full max-w-xs mt-4">

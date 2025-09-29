@@ -10,6 +10,7 @@ import IconApp from "../../assets/icons/applestore.svg";
 import IconPl from "../../assets/icons/ggplaystore.svg";
 import IconHu from "../../assets/icons/huawei.svg";
 import { useTranslation } from "react-i18next";
+import AboutUs from "../../pages/AboutUs/main";
 
 
 
@@ -63,8 +64,8 @@ function Footer() {
                         <h6 className="text-sm text-gray-900 font-medium mb-4">{t("QuickLinks")}</h6>
                         <ul className="text-xs space-y-3">
                             <li>
-                                <a href="#" className="text-gray-600 hover:text-gray-900">
-                                    {t("Aboutus")}
+                                <a href="/aboutus" className="text-gray-600 hover:text-gray-900">
+                                    {t("Aboutus")} 
                                 </a>
                             </li>
                             <li>
@@ -73,12 +74,12 @@ function Footer() {
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                <a href="/news" className="text-gray-600 hover:text-gray-900">
                                     {t("News")}
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                <a href="/forms" className="text-gray-600 hover:text-gray-900">
                                     {t("OnlineForms")}
                                 </a>
                             </li>
@@ -90,12 +91,12 @@ function Footer() {
                         <h6 className="text-sm text-gray-900 font-medium mb-4">{t("BankingServices")}</h6>
                         <ul className="text-xs space-y-3">
                             <li>
-                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                <a href="/loan" className="text-gray-600 hover:text-gray-900">
                                     {t("Loan")}
                                 </a>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-600 hover:text-gray-900">
+                                <a href="/exchangerate" className="text-gray-600 hover:text-gray-900">
                                     {t("ForeignExchange")}
                                 </a>
                             </li>
@@ -156,11 +157,16 @@ function Footer() {
 
                         <div>
                             <p className="text-xs text-gray-900 font-medium">{t("ATMLocation")}</p>
-                            <ul className="text-xs mt-2 space-y-1">
+                            <div>
+                                <a href="/atm">
+                                        <ul className="text-xs mt-2 space-y-1">
                                 <li>
                                     <span className="text-gray-600">{t("FindATMLocation")}</span>
                                 </li>
                             </ul>
+                                </a>
+                            </div>
+                           
                         </div>
 
                         <div>
