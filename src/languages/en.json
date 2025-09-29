@@ -72,5 +72,17 @@
     "Ethics": "Ethics",
     "Interactions": "Interactions",
     "FeeAndCharge": "Fee & Charges",
-    "DowloadReaources": "Dowload Reaources"
+    "DowloadReaources": "Dowload Reaources",
+    "OrganizeChart": "Organization Chart",
+    "ReadMore": "Read More",
+    "OfficeAddress": "Office Address",
+    "PhoneNumbers": "Phone Numbers",
+
+
+    "SendMessage": "Send Us a Message",
+    "FullName": "Full Name",
+    "Subject": "Subject",
+    "Message": "Message",
+    "OurLocation": "Our Location"
+
 }

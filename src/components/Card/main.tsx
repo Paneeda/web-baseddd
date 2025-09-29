@@ -2,7 +2,12 @@ import NewsImg from "/lg/event-1.png"
 import NewsImg2 from "/lg/event-2.png"
 import NewsImg3 from "/lg/event-3.png"
 import NewsImg4 from "/lg/event-4.png"
+import { useTranslation } from 'react-i18next';
+
 export default function CardList () {
+
+     const { t } = useTranslation();
+
 return(
 
 <div className="grid grid-cols-1 p-3 pl-10 lg:grid-cols-4  gap-5 ">
@@ -19,7 +24,7 @@ return(
         </a>
        
         <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+          {t('ReadMore')}
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
@@ -39,7 +44,7 @@ return(
         </a>
        
         <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+           {t('ReadMore')}
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
@@ -56,7 +61,7 @@ return(
             <h4 className="mb-2 text-xl max-w-50 tracking-tight text-gray-900 dark:text-white truncate">Innovating Cross-Border Payments First Time in Laos for ggggggggggggVisa B2B</h4>
         </a>
         <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+        {t('ReadMore')}
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
@@ -73,7 +78,7 @@ return(
             <h5 className="mb-2 text-xl max-w-50 tracking-tight text-gray-900 dark:text-white truncate">ໂປຣໂມຊັ່ນເປີດບັນຊີໃໝ່dddddddddddddddd</h5>
         </a>
         <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+           {t('ReadMore')}
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
@@ -90,7 +95,7 @@ return(
             <h5 className="mb-2 text-xl max-w-50 tracking-tight text-gray-900 dark:text-white truncate">ໂປຣໂມຊັ່ນເປີດບັນຊີໃໝ່ …ddddddddddddddddd</h5>
         </a>
         <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Read more
+            {t('ReadMore')}
              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>

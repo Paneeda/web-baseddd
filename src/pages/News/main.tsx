@@ -4,6 +4,8 @@ import { fetchNewsPosts } from '../../services/fetchRates';
 
 const News: React.FC = () => {
 
+  const { t } = useTranslation();
+
   interface NewsPost {
     news_id: string | number;
     news_title: string;
@@ -58,7 +60,7 @@ const News: React.FC = () => {
                   <img src={post.h_img}  className=" mb-4 rounded h-15 border-b border-gray-300" />
                   <p className='text-right text-gray-300 text-xs hover:text-gray-500'>{post.created_at}</p>
                   <p className='text-sm'>{post.news_title}</p>
-                  <button className='bg-bic-navy px-3 py-2 rounded-lg text-white text-xs p-2 my-2 hover:bic-navy-light'>Read More 
+                  <button className='bg-bic-navy px-3 py-2 rounded-lg text-white text-xs p-2 my-2 hover:bic-navy-light'>{t('ReadMore')}
                     
                   </button>
                 </div>
