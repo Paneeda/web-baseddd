@@ -24,7 +24,7 @@ const Home: React.FC = () => {
 
     return (
         <div className=''>
-            <div className='pt-16'>
+            <div className='pt-10'>
                 
             <ImgSliderr imageUrls={IMAGES} />
 

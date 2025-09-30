@@ -19,6 +19,7 @@ import Ibanking from './pages/Product/electronic-banking/ibanking';
 import BicCare from './pages/Product/electronic-banking/biccare';
 import ServiceUnits from './components/seviceunits/main';
 import ExchangeRate from './components/Rate/exchangerate';
+import Senior from './pages/deposit/senior';
 
 
 
@@ -57,11 +58,18 @@ function App() {
           </Routes>
         </main>
 
-        <div className='mt-30'>
+        <div className='mt-10'>
           <Routes>
             <Route path='/exchangerate' element={<ExchangeRate />} />
+
+
+
+            <Route path='/senior' element={<Senior/>} />
+
+          
           </Routes>
         </div>
+        
 
 
 
