@@ -1,6 +1,6 @@
 import Dep1 from "/lg/seniordeposit.png";
 import DepSe from "/icons/senior-woman.svg";
-import Sicon from "/icons/senior.svg";
+import Sicon from "/icons/senior-1.svg";
 import Piggy from "/icons/piggy.svg";
 
 function Senior() {
