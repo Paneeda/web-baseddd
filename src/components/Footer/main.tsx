@@ -88,7 +88,7 @@ function Footer() {
 
                     {/* Banking Services */}
                     <div className="text-center sm:text-left">
-                        <h6 className="text-sm text-gray-900 font-medium mb-4">{t("BankingServices")}</h6>
+                        <h6 className="text-sm text-gray-900 font-medium mb-4">{t("BankServices")}</h6>
                         <ul className="text-xs space-y-3">
                             <li>
                                 <a href="/loan" className="text-gray-600 hover:text-gray-900">

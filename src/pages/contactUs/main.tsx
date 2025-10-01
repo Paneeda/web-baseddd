@@ -1,173 +1,137 @@
-import addIcon from "../../assets/icons/mapmarker.svg"
-import phonesIcon from "../../assets/icons/phonecall.svg"
-import emailIcon from "../../assets/icons/envelope.svg"
-import { useTranslation } from 'react-i18next';
+import addIcon from "../../assets/icons/mapmarker.svg";
+import phonesIcon from "../../assets/icons/phonecall.svg";
+import emailIcon from "../../assets/icons/envelope.svg";
+import { useTranslation } from "react-i18next";
+
 function Contactus() {
-     const { t } = useTranslation();
-    return (
-        <div className="pt-16">
+  const { t } = useTranslation();
+  return (
+    <div className="pt-16 px-4 md:px-10">
+      {/* Header */}
+      <div className="bg-bic-navy h-40 text-white flex flex-col justify-center items-center text-center px-4">
+        <h1 className="text-2xl md:text-3xl font-bold">{t("ContactUs")}</h1>
+        <p className="mt-2 text-sm md:text-base max-w-2xl">
+          We welcome all feedback and suggestions. Contact us through the
+          channels below
+        </p>
+      </div>
+
+      {/* Contact Cards */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-10">
+        <div className="text-center rounded-lg shadow-md p-5 bg-white">
+          <div className="flex justify-center mb-3">
+            <img src={addIcon} className="h-12" alt="" />
+          </div>
+          <h4 className="text-lg font-semibold text-bic-navy">
+            {t("OfficeAddress")}
+          </h4>
+          <p className="text-gray-700 text-sm mt-2">
+            Phonsaart, Xaysettha, Vientiane, Lao PDR.
+          </p>
+        </div>
+
+        <div className="text-center rounded-lg shadow-md p-5 bg-white">
+          <div className="flex justify-center mb-3">
+            <img src={phonesIcon} className="h-12" alt="" />
+          </div>
+          <h4 className="text-lg font-semibold text-bic-navy">
+            {t("PhoneNumbers")}
+          </h4>
+          <p className="text-gray-700 text-sm">Head Office: +85620 8850 8080</p>
+          <p className="text-gray-700 text-sm">
+            Customer Service: +85620 8850 7070
+          </p>
+        </div>
+
+        <div className="text-center rounded-lg shadow-md p-5 bg-white">
+          <div className="flex justify-center mb-3">
+            <img src={emailIcon} className="h-12" alt="" />
+          </div>
+          <h4 className="text-lg font-semibold text-bic-navy">Email</h4>
+          <p className="text-gray-700 text-sm">
+            General Information: enquiry@biclaos.com
+          </p>
+        </div>
+      </div>
+
+  
+      <div className="flex flex-col md:flex-row gap-6 mb-10">
+        {/* Form */}
+        <div className="w-full shadow-md rounded-md bg-white p-5">
+          <h2 className="text-bic-navy font-medium text-xl md:text-2xl text-center mb-4">
+            {t("SendMessage")}
+          </h2>
+
+          {/* Inputs Row 1 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm mb-1">{t("FullName")}</label>
+              <input
+                type="text"
+                className="w-full h-10 pl-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-slate-400 shadow-sm"
+              />
+            </div>
 
             <div>
-                <div className="bg-bic-navy h-40 text-white text-center ">
-                    <h1 className="text-white text-2xl font-bold text-center p-5 pt-10">{t('ContactUs')}</h1>
-                    <p className="text-white  ">we welcome all feedback and suggestions. Contact us through the channels below</p>
-                </div>
+              <label className="block text-sm mb-1">{t("PhoneNumbers")}</label>
+              <input
+                type="text"
+                className="w-full h-10 pl-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-slate-400 shadow-sm"
+              />
+            </div>
+          </div>
 
-
-
-                <div className=" flex flex-row pl-35 gap-5  p-15">
-
-                    <div className="text-center rounded-lg shadow-md h-43 w-xs p-2">
-                        <div className=" p-3 justify-items-center  ">
-                            <img src={addIcon} className="max-w-18  " alt="" />
-                        </div>
-                        <div>
-                            <h4 className="text-lg text-bic-navy">{t('OfficeAddress')}</h4>
-                            <p className="text-gray-700 text-sm"> Phonsaart, Xaysettha, Vientiane, Lao PDR.</p>
-                        </div>
-
-                    </div>
-
-
-                    <div className="text-center shadow-md rounded-lg w-xs p-2">
-                        <div className=" p-3 justify-items-center">
-                            <img src={phonesIcon} className="max-w-16 " alt="" />
-                        </div>
-                        <div>
-                            <h4 className=" text-bic-navy text-lg">{t('PhoneNumbers')}</h4>
-                            <p className="text-gray-700 text-sm">Head Office: +85620 8850 8080</p>
-                            <p className="text-gray-700 text-sm">Customer Service: +85620 8850 7070</p>
-                        </div>
-
-                    </div>
-
-                    <div className="text-center rounded-lg shadow-md w-xs p-2">
-                        <div className="p-3 justify-items-center ">
-                            <img src={emailIcon} className="max-w-20" alt="" />
-                        </div>
-                        <div>
-                            <h4 className=" text-bic-navy text-lg">Email </h4>
-                            <p className="text-gray-700 text-sm">General Information: enquiry@biclaos.com</p>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-
+          {/* Inputs Row 2 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+            <div>
+              <label className="block text-sm mb-1">Email</label>
+              <input
+                type="text"
+                className="w-full h-10 pl-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-slate-400 shadow-sm"
+              />
             </div>
 
-
-            <div className="p-1  pt-5  flex flex-row gap-3 mb-10">
-
-                <div className=" p-1 shadow-md rounded-md w-full ">
-                    <h2 className="text-bic-navy font-medium text-2xl p-1 rounded-lg text-center">{t('SendMessage')}</h2>
-
-                    <div className="flex flex-row p-2 px-23 ">
-
-                        <div className="flex flex-col">
-
-                            <div className="p-2">
-                                <label htmlFor="full-name">{t('FullName')}</label>
-                                <input type="text"
-                                    className="w-full h-10 pl-3 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200
-                             rounded-lg px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
-                                    placeholder="" />
-                            </div>
-
-
-                            <div className="p-2">
-                                <label htmlFor="full-name">{t('PhoneNumbers')}</label>
-                                <input type="text"
-                                    className="w-full h-10 pl-3 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200
-                             rounded-lg px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
-                                    placeholder="" />
-                            </div>
-
-                        </div>
-
-                        <div className="flex flex-col">
-                            <div className="p-2">
-                                <label htmlFor="full-name">Email</label>
-                                <input type="text"
-                                    className="w-full h-10 pl-3 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 
-                            rounded-lg px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
-                                    placeholder="" />
-                            </div>
-
-
-                            <div className="p-2">
-                                <label htmlFor="full-name">{t('Subject')}</label>
-                                <input type="text"
-                                    className="w-full h-10 pl-3 bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 
-                            rounded-lg px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
-                                    placeholder="" />
-
-
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div className="p-2 px-23">
-                        <label htmlFor="full-name">{t('Message')}</label>
-                        <textarea name="message" id="" className="block w-139 h-40 rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:shadow-md"></textarea>
-                    </div>
-
-                    <div className="p-5 ">
-                        <a href="#" className="">
-                            <button className="bg-bic-navy text-white rounded-lg px-4 py-3  hover:bg-bic-navylight ">{t('SendMessage')}</button>
-                        </a>
-                    </div>
-
-
-
-
-                </div>
-
-
-                <div className="p-1 shadow rounded-md w-full">
-                    <div className="bg-bic-navy h-35 rounded-t-lg">
-                        <h2 className="text-white text-center text-xl p-4 pt-5">{t('OurLocation')}</h2>
-                        <p className="text-slate-300 text-center">Our headquarters is located in the heart of Vientiane, easily accesible from all routes </p>
-                    </div>
-                    <div className="p-10">Map</div>
-
-                </div>
-
-
-
-
+            <div>
+              <label className="block text-sm mb-1">{t("Subject")}</label>
+              <input
+                type="text"
+                className="w-full h-10 pl-3 border border-slate-200 rounded-lg text-sm focus:outline-none focus:border-slate-400 shadow-sm"
+              />
             </div>
+          </div>
 
-        
-   
+          {/* Message */}
+          <div className="mt-4">
+            <label className="block text-sm mb-1">{t("Message")}</label>
+            <textarea
+              className="w-full h-32 border border-slate-200 rounded-lg text-sm p-3 focus:outline-none focus:border-slate-400 shadow-sm"
+            ></textarea>
+          </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          {/* Submit */}
+          <div className="mt-5 text-center">
+            <button className="bg-bic-navy text-white rounded-lg px-6 py-2 hover:bg-bic-navylight transition">
+              {t("SendMessage")}
+            </button>
+          </div>
         </div>
-    );
+
+        {/* Map Section */}
+        <div className="w-full shadow-md rounded-md bg-white">
+          <div className="bg-bic-navy rounded-t-md p-5">
+            <h2 className="text-white text-lg md:text-xl text-center">
+              {t("OurLocation")}
+            </h2>
+            <p className="text-slate-300 text-center text-sm mt-1">
+              Our headquarters is located in the heart of Vientiane, easily
+              accessible from all routes.
+            </p>
+          </div>
+          <div className="p-5 text-center text-gray-500">Map</div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
-
-export default Contactus
+export default Contactus;
