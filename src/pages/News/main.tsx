@@ -24,13 +24,14 @@ const News: React.FC = () => {
       try {
         const rawData = await fetchNewsPosts(i18n.language);
         // Assuming API shape: { data: [...] }
-        const list = rawData.data || rawData; // fallback if API returns array directly
+        const list = rawData.data.news || rawData; // fallback if API returns array directly
+        // console.log(rawData)
         const data = list.map((news: any) => ({
           news_id: news.news_id,
           news_title: news.title_text,
-          h_img: news.h_img,
+          h_img: "http://10.10.9.60:8080" + news.h_img,
           status: news.status,
-          created_at: news.created_at
+          created_at: news.updated_at
         }));
         setNewsPost(data);
       } catch (error) {
@@ -41,6 +42,9 @@ const News: React.FC = () => {
     };
     getNewsPosts();
   }, [i18n.language]);
+
+  console.log(newsPost)
+  let img = "http://10.10.9.60:8080/media/images/autistic_donation_2023-05-25_16-32-21.jpg"
 
   return (
     <div className="lg:pt-16">

@@ -9,7 +9,7 @@ function Executiveteam() {
             <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">{t('BoardOfDirector')}</h1>
 
             <section className=" py-10 ">
-                <div className="px-10 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-20">
+                <div className="px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
 
                     {/*Team member 1*/}
                     <div className="bg-white rounded-lg shadow-md p-6 my-6 text-center ">
@@ -46,7 +46,7 @@ function Executiveteam() {
             <h1 className=" p-5 text-center text-bic-navy text-3xl font-semibold uppercase ">{t('ExecutiveTeam')}</h1>
 
             <section className=" py-10">
-                <div className="px-10 grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-20">
+                <div className="px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-20">
 
 
 

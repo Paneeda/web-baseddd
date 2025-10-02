@@ -8,7 +8,7 @@ function History() {
     return (
         <div className="">
 
-            <div className="p-30 flex gap-20  border-gray-300">
+            <div className="p-10 lg:flex gap-20  border-gray-300">
                 <div className="p-20"> <img className="max-w-24" src={Logo} alt="" /></div>
 
                 <div><h1 className="p-7 text-3xl border-l-8  border-bic-navy ">{t('Aboutus')} <span className="text-bic-navy">BIC</span> <span className="text-bic-red">Bank</span></h1>
@@ -19,7 +19,7 @@ function History() {
 
             </div>
 
-            <div className=" flex p-15 ps-32 gap-20 ">
+            <div className=" lg:flex p-15 gap-20 ">
 
 
                 {/*Vision */}
