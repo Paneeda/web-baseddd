@@ -58,10 +58,10 @@ const News: React.FC = () => {
             <div className="text-center py-8 opacity-70">No news found.</div>
           )}
           {!loading && newsPost.length > 0 && (
-            <div className=" mx-auto p-4 grid gap-6">
+            <div className=" mx-auto p-4 grid lg:grid-cols-4 gap-6">
               {newsPost.map((post) => (
-                <div key={post.news_id} className="border max-w-sm ml-9 rounded-lg shadow-md">
-                  <img src={post.h_img}  className=" mb-4 rounded h-15 border-b border-gray-300" />
+                <div key={post.news_id} className="border-gray-400 max-w-sm ml-9 rounded-lg shadow-md">
+                  <img src={post.h_img}  className=" mb-4 rounded h-55 w-full border-b border-gray-300" />
                   <p className='text-right text-gray-300 text-xs hover:text-gray-500'>{post.created_at}</p>
                   <p className='text-sm'>{post.news_title}</p>
                   <button className='bg-bic-navy px-3 py-2 rounded-lg text-white text-xs p-2 my-2 hover:bic-navy-light'>{t('ReadMore')}
