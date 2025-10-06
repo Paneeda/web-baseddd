@@ -70,17 +70,7 @@ function App() {
           </Routes>
         </div>
 
-        <div>
-        <Routes>
 
-          <Route path=''/>
-
-        
-
-        </Routes>
-        
-        </div>
-        
 
 
 

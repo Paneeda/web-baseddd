@@ -62,9 +62,26 @@ const fetchNewsPosts = async (lang?: string) => {
     }
 };
 
+
+const fetchPromotionPost = async (lang?: string) => {
+    
+    try {
+   
+        const response = await api.get('/api/promos', {
+            params: { lang: (lang || currentLang()) }
+        });
+        return response.data;
+    } catch (error) {
+        console.error('Error fetching promos posts:', error);
+        throw error;
+    }
+};
+
+
 export {
     fetchExchangeRate,
     fetchExchangeRateByRange,
     fetchInterestRate,
-    fetchNewsPosts
+    fetchNewsPosts,
+    fetchPromotionPost
 };
