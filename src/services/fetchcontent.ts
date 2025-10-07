@@ -44,13 +44,28 @@ const fetchExecutiveTeam = async (lang?: string) => {
 
 };
 
+const fetchForms = async (lang?: string) => {
+
+    try {
+        const response = await api.get('/api/mgnt-members', {
+            params: { lang: (lang || currentLang()) }
+        });
+        return response.data;
+    } catch(error) {
+        console.error ('Error Fetching mgm-team:', error);
+        throw error;
+    }
+
+};
+
 
 
 
 export {
   
    fetchOrgChart,
-   fetchExecutiveTeam
+   fetchExecutiveTeam,
+   fetchForms
 };
 
 
