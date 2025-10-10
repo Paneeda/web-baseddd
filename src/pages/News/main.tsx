@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { fetchNewsPosts } from '../../services/fetchRates';
+import { Link } from 'react-router-dom';
+import ReactMarkdown from 'react-markdown';
 
 const News: React.FC = () => {
-
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   interface NewsPost {
     news_id: string | number;
     news_title: string;
+    news_content: string;
     h_img: string;
     status: string;
     created_at: string;
-  };
+  }
 
-  const { i18n } = useTranslation();
   const [newsPost, setNewsPost] = useState<NewsPost[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -23,15 +24,14 @@ const News: React.FC = () => {
       setLoading(true);
       try {
         const rawData = await fetchNewsPosts(i18n.language);
-        // Assuming API shape: { data: [...] }
-        const list = rawData.data.news || rawData; // fallback if API returns array directly
-        // console.log(rawData)
+        const list = rawData.data?.news || rawData;
         const data = list.map((news: any) => ({
           news_id: news.news_id,
           news_title: news.title_text,
+          news_content: news.content,
           h_img: "http://10.10.9.60:8080" + news.h_img,
           status: news.status,
-          created_at: news.updated_at
+          created_at: news.updated_at,
         }));
         setNewsPost(data);
       } catch (error) {
@@ -43,39 +43,42 @@ const News: React.FC = () => {
     getNewsPosts();
   }, [i18n.language]);
 
-  console.log(newsPost)
-  let img = "http://10.10.9.60:8080/media/images/autistic_donation_2023-05-25_16-32-21.jpg"
-
   return (
     <div className="lg:pt-16">
-
       <div className="mb-8">
-        <div>
-          {loading && (
-            <div className="text-center py-8">Loading...</div>
-          )}
-          {!loading && newsPost.length === 0 && (
-            <div className="text-center py-8 opacity-70">No news found.</div>
-          )}
-          {!loading && newsPost.length > 0 && (
-            <div className=" mx-auto p-4 grid lg:grid-cols-4 gap-6">
-              {newsPost.map((post) => (
-                <div key={post.news_id} className="border-gray-400 max-w-sm ml-9 rounded-lg shadow-md">
-                  <div className='h-fit w-full  mb-4 rounded border-b border-gray-300'>
-                      <img src={post.h_img}  />
-                  </div>
-                  <p className='text-right text-gray-300 text-xs hover:text-gray-500'>{post.created_at}</p>
-                  <p className='text-sm'>{post.news_title}</p>
-                  <button className='bg-bic-navy px-3 py-2 rounded-lg text-white text-xs p-2 my-2 hover:bic-navy-light'>{t('ReadMore')}
-                    
-                  </button>
+        {loading && <div className="text-center py-8">Loading...</div>}
+        {!loading && newsPost.length === 0 && (
+          <div className="text-center py-8 opacity-70">No news found.</div>
+        )}
+
+        {!loading && newsPost.length > 0 && (
+          <div className="mx-auto p-4 grid lg:grid-cols-4 gap-6">
+            {newsPost.map((post) => (
+              <div key={post.news_id} className="border-gray-400 max-w-sm ml-9 rounded-lg shadow-md bg-white dark:bg-gray-800">
+                <div className="h-fit w-full mb-4 rounded border-b border-gray-300">
+                  <img src={post.h_img} alt={post.news_title} className="rounded-t-lg" />
                 </div>
-              ))}
-            </div>
-          )}
-        </div>
+
+                <p className="text-right text-gray-400 text-xs hover:text-gray-500">
+                  {post.created_at}
+                </p>
+
+                <p className="text-sm font-semibold mb-2"><ReactMarkdown>{post.news_title}</ReactMarkdown></p>
+
+              
+                <Link
+                  to={`/news/${post.news_id}`}
+                  className="inline-block bg-bic-navy px-3 py-2 rounded-lg text-white text-xs hover:bg-bic-navy-light"
+                >
+                  {t('ReadMore')}
+                </Link>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
-  )
-}
+  );
+};
+
 export default News;

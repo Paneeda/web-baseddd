@@ -44,19 +44,22 @@ const fetchExecutiveTeam = async (lang?: string) => {
 
 };
 
-const fetchForms = async (lang?: string) => {
-
-    try {
-        const response = await api.get('/api/mgnt-members', {
-            params: { lang: (lang || currentLang()) }
-        });
-        return response.data;
-    } catch(error) {
-        console.error ('Error Fetching mgm-team:', error);
-        throw error;
-    }
-
+const fetchForm = async (lang?: string) => {
+  try {
+    const response = await api.get('/api/form-downloads', {
+      params: { lang: lang || currentLang() } // e.g., "la" or "en"
+    });
+    return response.data; 
+  } catch (error) {
+    console.error('Error fetching retirement post:', error);
+    throw error;
+  }
 };
+
+
+
+
+
 
 
 
@@ -65,7 +68,7 @@ export {
   
    fetchOrgChart,
    fetchExecutiveTeam,
-   fetchForms
+   fetchForm
 };
 
 

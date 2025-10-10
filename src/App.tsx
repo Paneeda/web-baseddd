@@ -19,7 +19,8 @@ import Ibanking from './pages/Product/electronic-banking/ibanking';
 import BicCare from './pages/Product/electronic-banking/biccare';
 import ServiceUnits from './components/seviceunits/main';
 import ExchangeRate from './components/Rate/exchangerate';
-import Senior from './pages/deposit/senior';
+import NewsDetail from './pages/News/newsDetail';
+import PromoDetail from './pages/promotion/promotionDetail';
 
 
 
@@ -55,6 +56,7 @@ function App() {
             <Route path='/bic-care' element={<BicCare />} />
             <Route path='serviceunit' element={<ServiceUnits />} />
 
+
           </Routes>
         </main>
 
@@ -64,7 +66,11 @@ function App() {
 
 
 
-            <Route path='/senior' element={<Senior/>} />
+            <Route path='/news/:id' element={<NewsDetail/>} />
+    
+
+            <Route path='/promo/:id' element={<PromoDetail/>} />
+          
 
           
           </Routes>

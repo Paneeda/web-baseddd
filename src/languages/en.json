@@ -87,6 +87,21 @@
     "BankHistory": "Bank History",
     "Charts": "Charts",
     "DownloadResources": "Dowload Resources",
-    "Promotions": "Promotions"
+    "Promotions": "Promotions",
+
+    "ProductObj": "Product Objective",
+    "ProductObjCon": "The Internet Banking Service is a tool to facilitate customers to access their bank accounts and manage their money online from different locations anytime they want.",
+    "BenefitForUser": "Benefit for Users",
+    "BenefitForUser1": "Perform financial transactions within BIC Accounts faster, anywhere, anytime.",
+    "BenefitForUser2": "Amend transactions easily using Admin User privileges.",
+    "BenefitForUser3": "Schedule automatic or future payment transactions.",
+    "BenefitForUser4": "Process payroll for staff without extra bank fees.",
+    "BenefitForUser5": "Monitor usage and review bank statements easily.",
+
+
+    "SpecificCon": "Specific Conditions",
+    "SpecificCon1": "The user must have current account with BIC Bank.",
+    "SpecificCon2": "Only an account holder or a person, who has been entitled by an account holder, can register for the service.",
+    "SpecificCon3": "Before using the services, the user should accept terms and conditions and also complete the application form with reliable information. A power of attorney letter is required, if an account holder cannot register/apply by himself/herself while valid ID cards must be provided by both an account holder and his/her representative"
 
 }

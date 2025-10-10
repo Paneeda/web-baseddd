@@ -1,157 +1,168 @@
-import Ibanner from "/lg/i-banking-1.png"
-import Imgsec from "/lg/img-sec-ibank.png"
-import DownloadIcon from "../../../assets/icons/download.svg"
-import fileicon from "/lg/file-icon.png"
+import Ibanner from "/lg/i-banking-1.png";
+import Imgsec from "/lg/img-sec-ibank.png";
+import DownloadIcon from "../../../assets/icons/download.svg";
+import FileIcon from "/lg/file-icon.png";
+import { useTranslation } from 'react-i18next';
 
-function Ibanking () {
-    return (
-        <div className="pt-18">
+const forms = [
+  {
+    title: "BIC I-Banking Application Form Corporate (ENG)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+  },
+  {
+    title: "BIC I-Banking Application Form Corporate (LA)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+  },
+  {
+    title: "BIC I-Banking Application Form Individual (ENG)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+  },
+  {
+    title: "BIC I-Banking Application Form Individual (LA)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+  },
+  {
+    title: "Terms & Conditions of Internet Banking (ENG)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+  },
+  {
+    title: "Terms & Conditions of Internet Banking (LA)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+  },
+];
 
+function Ibanking() {
 
+        const { t } = useTranslation();
+  return (
+    <div className=" bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
 
-            <div className="">
-                <section className="flex">
-                    <img src={Ibanner} alt="" />
-
-                </section>
-                         <h2 className="text-2xl my-10 border-l-100 text-start border-bic-navy">I-Banking</h2>
-
-                <section className="lg:flex lg:flex-row p-5 gap-10  ">
-                    <div className="columns-1">
-                        <h3 className="font-bold"> Product Objective</h3>
-                        <p className="text-justify">The Internet Banking Service is a tool to facilitate customers to access their
-                         bank accounts and manage their money online from different locations in anytime that they want.</p>
-                         <h3 className="font-bold">Benefit for User</h3>
-                         <ul className="list-disc text-justify ml-5">
-                            <li> Can perform financial transaction within BIC Accounts faster as it can be accessed anywhere and anytime.</li>
-                            <li> The customer can make amendment on their transaction as they are allowed to have Admin User as well.</li>
-                            <li> Customers can set auto process transaction (recurrence) or set payment transaction in advance.</li>
-                            <li>The business customer can process payroll transactions for staff by their own without paying any fees to the bank.</li>
-                            <li> Easy to monitor usage of transactions or review bank statement.</li>
-                         </ul>
-                         <h3 className="font-bold ">Specific Conditions:</h3>
-                         <ul className="text-justify ml-5"> 
-                            <li className="list-disc">The user must have current account with BIC Bank.</li>
-                            <li className="list-disc">Only an account holder or a person, who has been entitled by an account holder, can register for the service.</li>
-                            <li className="list-disc">Before using the services, the user should accept terms and conditions and also complete the application form with reliable information.</li>
-                            <li className="list-disc">A power of attorney letter is required, if an account holder cannot register/apply by himself/herself while valid ID cards 
-                                must be provided by both an account holder and his/her representative</li>
-                         </ul>
-                    </div>
-                   
-                    <div className="max-w-sm columns-1 ml-9 mt-4 " >
-                            <img src={Imgsec} alt="" />
-                            <img src={Imgsec} className="pt-3" alt="" />
-                      
-                    </div> 
-                </section>
-
-                  <h2 className="text-2xl md:text-3xl border-l-100   border-bic-navy">I-Banking Forms</h2>
-                <div>
-               
-                  {/*items */}
-                  <div className="p-10 ml-3  grid grid-cols-1 lg:grid-cols-3">
-                     <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
-            
-        <div className="flex items-center mb-4 p-2">
-            <img src={fileicon} alt="" className="h-6 w-6 text-slate-600" />
-            
-            <h5 className="ml-3  text-slate-800 text-xl font-semibold" >  
-            Audited Report 2024 ENG
-            </h5>
-            <a href="https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf" target="_blank">
-            <img src={DownloadIcon} alt="" className="ml-4 h-4 w-4 " /></a>
+      <section className="relative w-full">
+        <img
+          src={Ibanner}
+          alt="I-Banking Banner"
+          className="w-full object-cover max-h-[400px] rounded-b-2xl shadow-md"
+        />
+        <div className="absolute inset-0  flex items-center justify-center">
+ 
         </div>
-        <p className="text-gray-500 p-2">2024</p>
+      </section>
+
+      <div className="max-w-7xl mx-auto px-6 py-16">
+        <h2 className="text-3xl font-bold border-l-4 border-bic-navy text-left pl-4 mb-8">
+          I-Banking
+        </h2>
+
+        <div className="flex flex-col lg:flex-row gap-10">
+          {/* Text Content */}
+          <div className="flex-1 space-y-6">
+            <div>
+              <h3 className="font-semibold text-lg mb-2">{t('ProductObj')}</h3>
+              <p className="leading-relaxed text-justify">
+              {t('ProductObjCon')}
+              </p>
             </div>
 
-                <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
-            
-        <div className="flex items-center mb-4 p-2">
-            <img src={fileicon} alt="" className="h-6 w-6 text-slate-600" />
-            
-            <h5 className="ml-3  text-slate-800 text-xl font-semibold" >  
-            Audited Report 2024 ENG
-            </h5>
-            <a href="https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf" target="_blank">
-            <img src={DownloadIcon} alt="" className="ml-4 h-4 w-4 " /></a>
-        </div>
-        <p className="text-gray-500 p-2">2024</p>
+            <div>
+              <h3 className="font-semibold text-lg mb-2">{t('BenefitForUser')}</h3>
+              <ul className="list-disc ml-5 space-y-2 text-justify">
+                <li>
+                  {t('BenefitForUser1')}
+                </li>
+                <li>
+                  {t('BenefitForUser2')}
+                </li>
+                <li>
+                  {t('BenefitForUser3')}
+                </li>
+                <li>
+                  {t('BenefitForUser4')}
+                </li>
+                <li>
+                  {t('BenefitForUser5')}
+                </li>
+              </ul>
             </div>
 
-                <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
-            
-        <div className="flex items-center mb-4 p-2">
-            <img src={fileicon} alt="" className="h-6 w-6 text-slate-600" />
-            
-            <h5 className="ml-3  text-slate-800 text-xl font-semibold" >  
-            Audited Report 2024 ENG
-            </h5>
-            <a href="https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf" target="_blank">
-            <img src={DownloadIcon} alt="" className="ml-4 h-4 w-4 " /></a>
-        </div>
-        <p className="text-gray-500 p-2">2024</p>
+            <div>
+              <h3 className="font-semibold text-lg mb-2">
+               {t('SpecificCon')}
+              </h3>
+              <ul className="list-disc ml-5 space-y-2 text-justify">
+                <li> {t('SpecificCon1')}</li>
+                <li>
+                   {t('SpecificCon2')}
+                </li>
+                <li>
+                 {t('SpecificCon3')}
+                </li>
+                
+              </ul>
             </div>
+          </div>
 
-                <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
-            
-        <div className="flex items-center mb-4 p-2">
-            <img src={fileicon} alt="" className="h-6 w-6 text-slate-600" />
-            
-            <h5 className="ml-3  text-slate-800 text-xl font-semibold" >  
-            Audited Report 2024 ENG
-            </h5>
-            <a href="https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf" target="_blank">
-            <img src={DownloadIcon} alt="" className="ml-4 h-4 w-4 " /></a>
+          {/* Images */}
+          <div className="flex-1 flex flex-col gap-4 justify-center">
+            <img
+              src={Imgsec}
+              alt="Internet Banking"
+              className="rounded-xl shadow-md hover:scale-105 transition-transform"
+            />
+     
+          </div>
         </div>
-        <p className="text-gray-500 p-2">2024</p>
-            </div>
+      </div>
 
-               <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
-            
-        <div className="flex items-center mb-4 p-2">
-            <img src={fileicon} alt="" className="h-6 w-6 text-slate-600" />
-            
-            <h5 className="ml-3  text-slate-800 text-xl font-semibold" >  
-            Audited Report 2024 ENG
-            </h5>
-            <a href="https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf" target="_blank">
-            <img src={DownloadIcon} alt="" className="ml-4 h-4 w-4 " /></a>
-        </div>
-        <p className="text-gray-500 p-2">2024</p>
-            </div>
+      {/* Forms Section */}
+      <div className="max-w-7xl mx-auto px-6 pb-20">
+        <h2 className="text-3xl font-bold border-l-4 border-bic-navy pl-4 mb-8">
+          I-Banking Forms
+        </h2>
 
-               <div className="relative  my-6 bg-white shadow-sm border border-slate-200 rounded-lg w-96"> 
-            
-        <div className="flex items-center mb-4 p-2">
-            <img src={fileicon} alt="" className="h-6 w-6 text-slate-600" />
-            
-            <h5 className="ml-3  text-slate-800 text-xl font-semibold" >  
-            Audited Report 2024 ENG
-            </h5>
-            <a href="https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf" target="_blank">
-            <img src={DownloadIcon} alt="" className="ml-4 h-4 w-4 " /></a>
-        </div>
-        <p className="text-gray-500 p-2">2024</p>
-            </div>
-
-
-
-
-                  </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {forms.map((form, index) => (
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-lg transition-shadow p-5"
+            >
+              <div className="flex items-start gap-3">
+                <img
+                  src={FileIcon}
+                  alt=""
+                  className="h-8 w-8 opacity-80 flex-shrink-0"
+                />
+                <div className="flex-1">
+                  <h5 className="font-semibold text-lg mb-2 text-gray-800 dark:text-gray-100">
+                    {form.title}
+                  </h5>
+                  <p className="text-sm text-gray-500 mb-3">{form.year}</p>
+                  <a
+                    href={form.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-bic-navy hover:text-bic-red font-medium"
+                  >
+                    <img
+                      src={DownloadIcon}
+                      alt="Download"
+                      className="h-4 w-4"
+                    />
+                    Download
+                  </a>
                 </div>
-
+              </div>
             </div>
-
-
-
-
-
-
-
-
+          ))}
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
-export default Ibanking
+export default Ibanking;

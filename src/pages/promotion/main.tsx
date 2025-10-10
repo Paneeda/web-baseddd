@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { fetchPromotionPost } from "../../services/fetchRates";
-
+import ReactMarkdown from 'react-markdown';
+import { Link } from 'react-router-dom';
 interface PromotionPost {
     promo_id: string | number;
     title_text: string;
@@ -75,10 +76,14 @@ const Promotions: React.FC = () => {
                                 <p className="text-right text-gray-400 text-xs mb-2">
                                     {post.updated_at}
                                 </p>
-                                <p className="text-sm mb-3">{post.title_text}</p>
-                                <button className="bg-bic-navy px-3 py-2 rounded-lg text-white text-xs hover:bg-bic-navy-light">
-                                    {t("ReadMore")}
-                                </button>
+                                <p className="text-sm mb-3"><ReactMarkdown>{post.title_text}</ReactMarkdown></p>
+
+                                <Link
+                                    to={`/promo/${post.promo_id}`}
+                                    className="inline-block bg-bic-navy px-3 py-2 rounded-lg text-white text-xs hover:bg-bic-navy-light"
+                                >
+                                    {t('ReadMore')}
+                                </Link>
                             </div>
                         </div>
                     ))}
