@@ -3,43 +3,59 @@ import Imgsec from "/lg/img-sec-ibank.png";
 import DownloadIcon from "../../../assets/icons/download.svg";
 import FileIcon from "/lg/file-icon.png";
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 
 const forms = [
   {
     title: "BIC I-Banking Application Form Corporate (ENG)",
     year: 2025,
-    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+    link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-Application-form-Corporate-Eng-Version.pdf",
   },
   {
-    title: "BIC I-Banking Application Form Corporate (LA)",
+    title: "BIC I-Banking Maintenance Coporate Form Corporate (LA)",
     year: 2025,
-    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
-  },
-  {
-    title: "BIC I-Banking Application Form Individual (ENG)",
-    year: 2025,
-    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
-  },
-  {
-    title: "BIC I-Banking Application Form Individual (LA)",
-    year: 2025,
-    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+    link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-Maintenance-form-Corporate-Eng-Version.pdf",
   },
   {
     title: "Terms & Conditions of Internet Banking (ENG)",
     year: 2025,
-    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+    link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-TC-Eng-version.pdf",
   },
   {
-    title: "Terms & Conditions of Internet Banking (LA)",
+    title: "BIC I-Banking Letter of Authorisation Indemnity",
     year: 2025,
-    link: "https://biclaos.com/wp-content/uploads/2025/04/LAS-2024-LA.pdf",
+    link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-Letter-of-Authorisation_Indemnity.pdf",
+  },
+  {
+    title: "BIC I-Banking Application Form Individual (ENG)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-Application-Form-Individual-Eng-Version.pdf",
+  },
+  {
+    title: "BIC I-Banking Transaction Discrepancy",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2024/05/I-Banking-TRANSACTION-DISCREPANCY-FORM-1.pdf",
+  },
+  {
+    title: "BIC I-Banking Maintenance Form (Personal / Retail)",
+    year: 2025,
+    link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-Maintenance-form-Retail_Personal-Eng-Version.pdf",
+  },
+  {
+    title: "I-banking Services Fees and Transaction Limits(Retail)",
+    year: 2025,
+    Link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-Retail-Fee-Limits-Website.pdf"
+  },
+  {
+    title: "I-banking Services Fees and Transaction Limits(Corporate)",
+    year: 2025,
+    Link: "https://biclaos.com/wp-content/uploads/2024/05/BIC-I-banking-Corporate-Fee-Limits-Website-.pdf"
   },
 ];
 
 function Ibanking() {
 
-        const { t } = useTranslation();
+  const { t } = useTranslation();
   return (
     <div className=" bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100">
 
@@ -50,7 +66,7 @@ function Ibanking() {
           className="w-full object-cover max-h-[400px] rounded-b-2xl shadow-md"
         />
         <div className="absolute inset-0  flex items-center justify-center">
- 
+
         </div>
       </section>
 
@@ -65,7 +81,7 @@ function Ibanking() {
             <div>
               <h3 className="font-semibold text-lg mb-2">{t('ProductObj')}</h3>
               <p className="leading-relaxed text-justify">
-              {t('ProductObjCon')}
+                {t('ProductObjCon')}
               </p>
             </div>
 
@@ -92,17 +108,17 @@ function Ibanking() {
 
             <div>
               <h3 className="font-semibold text-lg mb-2">
-               {t('SpecificCon')}
+                {t('SpecificCon')}
               </h3>
               <ul className="list-disc ml-5 space-y-2 text-justify">
                 <li> {t('SpecificCon1')}</li>
                 <li>
-                   {t('SpecificCon2')}
+                  {t('SpecificCon2')}
                 </li>
                 <li>
-                 {t('SpecificCon3')}
+                  {t('SpecificCon3')}
                 </li>
-                
+
               </ul>
             </div>
           </div>
@@ -114,7 +130,7 @@ function Ibanking() {
               alt="Internet Banking"
               className="rounded-xl shadow-md hover:scale-105 transition-transform"
             />
-     
+
           </div>
         </div>
       </div>

@@ -15,7 +15,6 @@ const Promotions: React.FC = () => {
     const [prosPost, setPromotionPost] = useState<PromotionPost[]>([]);
     const [loading, setLoading] = useState(false);
 
-    // Base URL from .env for images
     const baseUrl = import.meta.env.VITE_API_SERVE_STATIC || "";
 
     useEffect(() => {
@@ -25,10 +24,9 @@ const Promotions: React.FC = () => {
                 const rawData = await fetchPromotionPost(i18n.language);
                 console.log("Promotion API result:", rawData);
 
-                // safe access to promos array
                 const list = rawData?.data?.promos || [];
 
-                // map data and fix image URLs
+             
                 const data = list.map((promo: any) => ({
                     promo_id: promo.promo_id,
                     title_text: promo.title_text || promo.content_text || "No title",

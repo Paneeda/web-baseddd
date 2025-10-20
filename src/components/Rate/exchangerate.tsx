@@ -46,7 +46,7 @@ function ExchangeRate() {
     GetExchangeRate();
   }, []);
 
-  // When rates fetched, ensure defaults exist and compute initial conversion
+  
   useEffect(() => {
     if (!exchangeRate.rates || exchangeRate.rates.length === 0) return;
 

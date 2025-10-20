@@ -1,165 +1,117 @@
-import DepImg from "/lg/deposit-1.png"
-import Logo from "/lg/bic_1_2.png"
-import { useTranslation } from 'react-i18next';
+import DepImg from "/lg/deposit-1.png";
+import { useTranslation } from "react-i18next";
+import { useState, useEffect } from "react";
+import { fetchProduct } from "../../services/fetchcontent";
+import ReactMarkdown from "react-markdown";
+import { Link } from "react-router-dom";
 
-import Dep2 from "/lg/deposit-2.png";
-import Dep3 from "/lg/retirement-de.png";
-import Dep4 from "/lg/fixed-de.png";
-import Dep5 from "/lg/deposit-3.png";
+interface DepositPost {
+    product_id: string | number;
+    title_text: string;
+    content_text?: string;
+    h_img: string;
+    updated_at: string;
+}
 
 function Deposit() {
-    const { t } = useTranslation();
+    const { t, i18n } = useTranslation();
+    const [depPost, setDepPost] = useState<DepositPost[]>([]);
+    const [loading, setLoading] = useState(false);
+
+    const baseUrl = import.meta.env.VITE_API_SERVE_STATIC || "";
+
+    useEffect(() => {
+        const getDepositPost = async () => {
+            setLoading(true);
+            try {
+                const rawData = await fetchProduct(i18n.language);
+                const list = rawData?.data?.products || [];
+
+                const data = list.map((product: any) => ({
+                    product_id: product.product_id,
+                    title_text: product.title_text || "Untitled Product",
+                    h_img: product.h_img?.startsWith("http")
+                        ? product.h_img
+                        : `${baseUrl}${product.h_img}`,
+                    updated_at: product.updated_at,
+                }));
+
+                setDepPost(data);
+            } catch (error) {
+                console.error("Error fetching products:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        getDepositPost();
+    }, [i18n.language]);
+
     return (
-        <div className="pt-15">
-            <div className="bg-violet-600  ">
-                <img src={DepImg} alt="" />
+        <div className="bg-gray-50 dark:bg-gray-900 min-h-screen">
+            {/* Header Banner */}
+            <div className="relative">
+                <img
+                    className="w-full h-[400px] object-cover rounded-b-2xl shadow-md"
+                    src={DepImg}
+                    alt="Deposit Banner"
+                />
+               
             </div>
 
-            <div className=" p-5">
+            {/* Content Section */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                {loading && (
+                    <div className="flex justify-center py-12">
+                        <div className="animate-spin rounded-full h-10 w-10 border-4 border-bic-navy border-t-transparent"></div>
+                    </div>
+                )}
 
-                <div className="p-10 ">
+                {!loading && depPost.length === 0 && (
+                    <div className="text-center py-12 text-gray-500">
+                        {t("No promotions found.")}
+                    </div>
+                )}
 
-
-
-
-                    <section>
-                        <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3  gap-10 ">
-
-
-                            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xs">
-                                <a href="#">
-                                    <img className="rounded-t-lg p-1 h-fit lg:max-w-3xs" src={Dep2} alt="" />
-                                </a>
-
-                                <div className="p-5">
-                                    <a href="#">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white h-25">Senior Savings Deposit</h5>
-                                    </a>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    <a href="/senior" className="inline-flex  items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {t('ReadMore')}
-                                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
+                {!loading && depPost.length > 0 && (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {depPost.map((post) => (
+                            <div
+                                key={post.product_id}
+                                className="bg-white dark:bg-gray-800 rounded-2xl shadow hover:shadow-xl transition-shadow duration-300 overflow-hidden group"
+                            >
+                                <div className="overflow-hidden ">
+                                    <img
+                                        src={post.h_img}
+                                        alt={post.title_text}
+                                        className="w-full h-45 object-cover group-hover:scale-105 transition-transform duration-300"
+                                    />
                                 </div>
-
-                            </div>
-
-                            <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow-xs">
-                                <a href="#">
-                                    <img className="rounded-t-lg p-1 lg:max-w-3xs max-h-fit " src={Dep3} alt="" />
-                                </a>
-
-                                <div className="p-5">
-                                    <a href="#">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white h-25">Retirement Savings Deposit </h5>
-                                    </a>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    <a href="/retirement" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                                        {t('ReadMore')}
-                                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div>
-
-                            </div>
+                                <div className="p-5 flex flex-col justify-between h-[200px]">
+                                    <div>
+                                        <p className="text-right text-gray-400 text-xs mb-2">
+                                            {new Date(post.updated_at).toLocaleDateString()}
+                                        </p>
+                                        <h3 className="text-lg text-bic-navy font-medium  mb-3 line-clamp-2">
+                                            <ReactMarkdown>{post.title_text}</ReactMarkdown>
+                                        </h3>
+                                    </div>
+                                    <Link
+                                        to={`/productDe/${post.product_id}`}
+                                        className="inline-block bg-bic-navy left px-4 py-2 rounded-lg text-white text-xs hover:bg-bic-navy-light"
+                                    >
+                                        {t("ReadMore")}
+                                    </Link>
 
 
-                            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xs">
-                                <a href="#">
-                                    <img className="rounded-t-lg p-1 lg:max-w-3xs" src={Dep4} alt="" />
-                                </a>
-
-                                <div className="p-5">
-                                    <a href="#">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white h-25">Fixed Deposits – Upfront Interesst Payment</h5>
-                                    </a>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    <a href="#" className="inline-flex  items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {t('ReadMore')}
-                                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div></div>
-
-
-                            <div className="max-w-sm bg-white border border-gray-200 rounded-lg shadow-xs">                                             <a href="#">
-                                <img className="rounded-t-lg p-1 lg:max-w-3xs" src={Dep5} alt="" />
-                            </a>
-
-                                <div className="p-5">
-                                    <a href="#">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white h-25">Fixed Term Deposits</h5>
-                                    </a>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {t('ReadMore')}
-                                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div></div>
-
-
-                            <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow-xs">                                             <a href="#">
-                                <img className="rounded-t-lg p-1 lg:max-w-3xs" src={Dep4} alt="" />
-                            </a>
-
-                                <div className="p-5">
-                                    <a href="#">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white h-25">Current Account Deposit</h5>
-                                    </a>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {t('ReadMore')}
-                                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
-                                </div></div>
-
-
-                            <div className="max-w-sm  bg-white border border-gray-200 rounded-lg shadow-xs">
-                                <a href="#">
-                                    <img className="rounded-t-lg p-1 lg:max-w-3xs " src={Dep2} alt="" />
-                                </a>
-
-                                <div className="p-5">
-                                    <a href="#">
-                                        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white h-25">List Of Documents For Opening Of Account</h5>
-                                    </a>
-                                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-                                    <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-bic-navy rounded-lg hover:bg-sky-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                        {t('ReadMore')}
-                                        <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9" />
-                                        </svg>
-                                    </a>
                                 </div>
                             </div>
-
-
-                        </div>
-                    </section>
-                </div>
+                        ))}
+                    </div>
+                )}
             </div>
-
-
-            <div>
-
-            </div>
-
-
-
-
-
-
         </div>
     );
 }
 
-
-export default Deposit
+export default Deposit;

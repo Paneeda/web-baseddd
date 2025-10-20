@@ -65,12 +65,19 @@
     "Mission": "Our Mission",
     "coreValue": "BIC Core Values – BIC Care",
     "businessOriented": "Business Oriented",
+    "businessOriented1": "Good corporate governance and value-based solutions to succeed.",
     "CultureExcellence": "Culture Excellence",
+    "CultureExcellence1": "Setting high standards and strive to exceed them with dedication, efficiency and productivity. We recognise and reward superior results.",
     "Collaboration": "Collaboration",
+    "Collaboration1": "Working and thinking cohesively to create efforts for a sustainable outcome for all stakeholders.",
     "Agility": "Agility",
+    "Agility1": "Being fast and flexible, dynamic and adaptive in delivering pragmatic solutions.",
     "Respect": "Respect",
+    "Respect1": " An intrinsic trait to the foundational qualities of the Bank. Nonnegotiable value which is the main ingredient that provides momentum for an optimal results.",
     "Ethics": "Ethics",
+    "Ethics1": "Conducting ourselves with integrity and conforming to the highest level of ethical standards where services offered will be honest, fair and impartial.",
     "Interactions": "Interactions",
+    "Interactions1": "Strong committed interactions between all stakeholders, build trust and credibility which encourage collaborations to empower and deliver business values.",
     "FeeAndCharge": "Fee & Charges",
     "DowloadReaources": "Dowload Reaources",
     "OrganizeChart": "Organization Chart",
@@ -102,6 +109,14 @@
     "SpecificCon": "Specific Conditions",
     "SpecificCon1": "The user must have current account with BIC Bank.",
     "SpecificCon2": "Only an account holder or a person, who has been entitled by an account holder, can register for the service.",
-    "SpecificCon3": "Before using the services, the user should accept terms and conditions and also complete the application form with reliable information. A power of attorney letter is required, if an account holder cannot register/apply by himself/herself while valid ID cards must be provided by both an account holder and his/her representative"
+    "SpecificCon3": "Before using the services, the user should accept terms and conditions and also complete the application form with reliable information. A power of attorney letter is required, if an account holder cannot register/apply by himself/herself while valid ID cards must be provided by both an account holder and his/her representative",
+
+    "ApplicationForms": "Application Forms",
+    "I_Banking_Form": "I-Banking Forms",
+    "otherForm": "Other Forms",
+
+
+    "OperatingHours": "Operating Hours",
+    "ATMName": "ATM Name"
 
 }

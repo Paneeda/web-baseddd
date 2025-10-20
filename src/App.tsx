@@ -21,6 +21,7 @@ import ServiceUnits from './components/seviceunits/main';
 import ExchangeRate from './components/Rate/exchangerate';
 import NewsDetail from './pages/News/newsDetail';
 import PromoDetail from './pages/promotion/promotionDetail';
+import DepositDetail from './pages/Product/depositDetail';
 
 
 
@@ -60,7 +61,7 @@ function App() {
           </Routes>
         </main>
 
-        <div className='mt-10'>
+        <div className=''>
           <Routes>
             <Route path='/exchangerate' element={<ExchangeRate />} />
 
@@ -70,7 +71,7 @@ function App() {
     
 
             <Route path='/promo/:id' element={<PromoDetail/>} />
-          
+            <Route path='/productDe/:id' element={<DepositDetail/>} />
 
           
           </Routes>

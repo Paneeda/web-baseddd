@@ -41,7 +41,7 @@ const Header: React.FC = () => {
   // Language configuration
   const languages = [
     { code: 'en', name: 'English', flag: 'USD' },
-    { code: 'la', name: 'ລາວ', flag: 'LAK' },
+    { code: 'lo', name: 'ລາວ', flag: 'LAK' },
     { code: 'cn', name: '中文', flag: 'CNY' },
     { code: 'vn', name: 'Tiếng Việt', flag: 'VND' }
   ];
@@ -97,7 +97,7 @@ const Header: React.FC = () => {
                           <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                         </svg>
                       </div>
-                      <input type="search" id="search" className="block w-44 lg:w-56 p-2 pl-9 text-sm text-gray-900 border border-gray-300 rounded-sm bg-gray-50 focus:ring-bic-navy focus:border-bic-navy" placeholder="Search" aria-label="Search" />
+                      <input type={t('Search')} id={t('Search')} className="block w-44 lg:w-56 p-2 pl-9 text-sm text-gray-900 border border-gray-300 rounded-sm bg-gray-50 focus:ring-bic-navy focus:border-bic-navy" placeholder="Search" aria-label={t('Search')} />
                     </div>
                   </form>
                 </div>

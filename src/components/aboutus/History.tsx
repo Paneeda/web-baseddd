@@ -43,13 +43,13 @@ function History() {
                 {/*Core values*/}
                 <div className=" basis-sm">
                     <h1 className="text-center p-7 text-bic-navy text-xl ">{t('coreValue')}</h1>
-                    <h6 className="font-semibold text-justify text-bic-navy">{t('businessOriented')}<span className="font-thin">Good corporate governance and value-based solutions to succeed.</span></h6>
-                      <h6 className="font-semibold text-justify text-bic-navy">{t('Interactions')}<span className="font-thin">Strong committed interactions between all stakeholders, build trust and credibility which encourage collaborations to empower and deliver business values.</span></h6>
-                    <h6 className="font-semibold text-justify text-bic-navy">{t('CultureExcellence')}<span className="font-thin"> Setting high standards and strive to exceed them with dedication, efficiency and productivity. We recognise and reward superior results.</span></h6>
-                    <h6 className="font-semibold text-justify text-bic-navy">{t('Collaboration')} <span className="font-thin">    Working and thinking cohesively to create efforts for a sustainable outcome for all stakeholders.</span></h6>
-                    <h6 className="font-semibold text-justify text-bic-navy">{t('Agility')} <span className="font-thin "> Being fast and flexible, dynamic and adaptive in delivering pragmatic solutions.</span></h6>
-                    <h6 className="font-semibold text-justify text-bic-navy">{t('Respect')} <span className="font-thin "> An intrinsic trait to the foundational qualities of the Bank. Nonnegotiable value which is the main ingredient that provides momentum for an optimal results.</span></h6>
-                    <h6 className="font-semibold text-justify text-bic-navy">{t('Ethics')} <span className="font-thin">Conducting ourselves with integrity and conforming to the highest level of ethical standards where services offered will be honest, fair and impartial.</span></h6>
+                    <h6 className="font-semibold text-justify text-bic-navy">{t('businessOriented')}<span className="font-thin">{t('businessOriented1')}</span></h6>
+                      <h6 className="font-semibold text-justify text-bic-navy">{t('Interactions')}<span className="font-thin">{t('Interactions1')}</span></h6>
+                    <h6 className="font-semibold text-justify text-bic-navy">{t('CultureExcellence')}<span className="font-thin">{t('CultureExcellence1')}</span></h6>
+                    <h6 className="font-semibold text-justify text-bic-navy">{t('Collaboration')} <span className="font-thin">   {t('Collaboration1')}</span></h6>
+                    <h6 className="font-semibold text-justify text-bic-navy">{t('Agility')} <span className="font-thin ">{t('Agility1')}</span></h6>
+                    <h6 className="font-semibold text-justify text-bic-navy">{t('Respect')} <span className="font-thin ">{t('Respect1')} </span></h6>
+                    <h6 className="font-semibold text-justify text-bic-navy">{t('Ethics')} <span className="font-thin">{t('Ethics1')}</span></h6>
                 </div>
 
             </div>

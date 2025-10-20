@@ -17,7 +17,7 @@ i18n
       en: {
         translation: enTranslations
       },
-      la: {
+      lo: {
         translation: laTranslations
       },
       cn: {
@@ -30,7 +30,7 @@ i18n
     // Load language only (maps en-US -> en, zh-CN -> zh if provided)
     load: 'languageOnly',
     // Limit to supported languages to avoid unknown codes lingering
-    supportedLngs: ['en', 'la', 'cn', 'vn'],
+    supportedLngs: ['en', 'lo', 'cn', 'vn'],
 
     // Fallback language if translation is missing
     fallbackLng: 'en',
